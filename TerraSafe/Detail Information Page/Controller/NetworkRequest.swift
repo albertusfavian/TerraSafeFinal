@@ -84,10 +84,19 @@ class NetworkRequest{
     }
     
     func convertDateToString(stringDate: String) -> String {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter
         let stringSplited = stringDate.components(separatedBy: " ")
-//        stringSplited.
-        return stringSplited[0]
+
+        var newDate = ""
+        var newDatePass = stringSplited[0].components(separatedBy: "-")
+//        print (newDatePass[1])
+        if newDatePass[1] == "06"{
+            
+            newDate = "\(newDatePass[2]) Juni"
+        }
+        else if newDatePass[2] == "07"{
+            newDate = "\(newDatePass[2]) Juni"
+        }
+//        print("Date: \(newDate)")
+        return newDate
     }
 }

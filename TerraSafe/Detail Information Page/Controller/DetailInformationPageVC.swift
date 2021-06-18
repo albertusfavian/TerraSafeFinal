@@ -26,7 +26,9 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
     
     var listTemp: [Float] = []
     var listCondition: [String] = []
+    var listContitionNew: [String] = []
     var listDate: [String] = []
+    var i: Int = 0
     let url = URL(string: "http://api.openweathermap.org/data/2.5/forecast?q=Malang&appid=3e6254eea851a148b52545bce50cba35&units=metric")
     let requestService = NetworkRequest()
     var indexImage: Int = 0
@@ -42,10 +44,19 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
             self.listTemp = tempArray
             self.listCondition = conditionArray
             self.listDate = dateArray
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 self.weatherCollectionView.reloadData()
+                for condition in listCondition{
+                    if condition == "Rain"{
+                        listContitionNew.append("􀇈")
+                    }
+                    else if condition == "Clouds"{
+                        listContitionNew.append("􀇔")
+                    }
+                }
+                
             }
-//            print(self.listTemp, self.listCondition, self.listDate)
+            print(self.listTemp, self.listCondition, self.listDate)
         }
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -85,7 +96,7 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
         cell?.layer.cornerRadius = 10
         cell?.layer.borderWidth = 3
         cell?.layer.borderColor = tableView.backgroundColor?.cgColor
-        cell?.contentView.backgroundColor = UIColor.green
+        cell?.contentView.backgroundColor = #colorLiteral(red: 0.1607843137, green: 0.262745098, blue: 0.2156862745, alpha: 1)
         cell?.trackNameLabel.text = "Sirah Kencong"
         cell?.hourLabel.text = "3hour"
         return cell!
@@ -100,23 +111,38 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weatherCell", for: indexPath) as? WeatherCollectionViewCell
         cell?.layer.cornerRadius = 10
-        cell?.layer.backgroundColor = UIColor.red.cgColor
-        cell?.dateLabel.text = listDate.count != 0 ? listDate[indexPath.row] : ""
-        cell?.tempLabel.text = listTemp.count != 0 ? String(listTemp[indexPath.row]) : ""
+        
+//        cell?.layer.backgroundColor = UIColor.red.cgColor
+        print("Indexpath: \(indexPath.row)")
+        print(listCondition)
+//        print(listCondition)
+//        if listCondition[indexPath.row] == "Rain"{
+//            cell?.tempLabel.text = "􀇈"
+//        }
+//        else if listCondition[indexPath.row] == "Clouds"{
+//            cell?.tempLabel.text = "􀇔"
+//        }
+//        cell?.conditionLabel.text = listCondition.count !0 ? listCondition[indexPath.row] : ""
+        cell?.dateLabel.text = listDate.count != 0 ? (listDate[indexPath.row]) : ""
+        cell?.tempLabel.text = listTemp.count != 0 ? "\(String(listTemp[indexPath.row]))°C" : ""
+        cell?.conditionImages.image = UIImage(systemName: "cloud.rain.fill")
+        cell?.timeLabel.text = "06.00WIB"
         
         return cell!
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
         {
-           return CGSize(width: 100, height: 100)
+           return CGSize(width: 80, height: 80)
         }
+    
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
