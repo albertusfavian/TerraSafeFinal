@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>molecule</title>
+    <defs>
+        <filter color-interpolation-filters="auto" id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.160784 0 0 0 0 0.262745 0 0 0 0 0.215686 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Hifi-FIX-BGT" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="molecule" transform="translate(-40.000000, -608.000000)" filter="url(#filter-1)">
+            <g transform="translate(40.000000, 608.000000)">
+                <polygon id="Path" fill="#000000" fill-rule="nonzero" points="2.66665772 17 2 17.4347826 4.33339598 22 9 22 9 21.1304348 4.77789714 21.1304348"></polygon>
+                <polygon id="Path" fill="#000000" fill-rule="nonzero" points="11.3415805 6 12 5.56521739 9.6954389 1 5 1 5 1.86956522 9.25643065 1.86956522"></polygon>
+                <path d="M23,11.5 L19.6032891,5.55172415 L13.3602814,5.55172415 L10.1899413,0 L3.39671094,0 L0,5.94827587 L3.17034012,11.5 L0,17.0517241 L3.39671094,23 L10.1899413,23 L13.3602814,17.4482759 L19.6032891,17.4482759 L23,11.5 Z M3.84926101,0.793103458 L9.73739123,0.793103458 L12.6323327,5.86269193 L9.63971858,11.1034483 L3.84926101,11.1034483 L0.905291656,5.94827587 L3.84926101,0.793103458 Z M9.73739123,22.2068966 L3.84926101,22.2068966 L0.905291656,17.0517241 L3.84926101,11.8965517 L9.63971858,11.8965517 L12.6323327,17.1375017 L9.73739123,22.2068966 Z M13.3602814,16.6551724 L10.4163121,11.5 L13.3602814,6.3448276 L19.150739,6.3448276 L22.0947083,11.5 L19.150739,16.6551724 L13.3602814,16.6551724 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+                <polygon id="Path" fill="#000000" fill-rule="nonzero" points="20.3333602 11 18.2221775 15.1304348 14 15.1304348 14 16 18.6666667 16 21 11.4347826"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

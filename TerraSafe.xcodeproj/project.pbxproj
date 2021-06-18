@@ -1,0 +1,847 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19A26EEF51F23183FF392199 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		29523B44267776F700E194C8 /* mountain.json in Resources */ = {isa = PBXBuildFile; fileRef = 29523B43267776F700E194C8 /* mountain.json */; };
+		297C07B3266FDCFB00885885 /* g1t1.json in Resources */ = {isa = PBXBuildFile; fileRef = 297C07B2266FDCFB00885885 /* g1t1.json */; };
+		8E3F82092679E736005DBA59 /* sampleNewTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3F82072679E736005DBA59 /* sampleNewTabPage.storyboard */; };
+		8E55B1B3267B650F001C3CA6 /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E55B1B2267B650F001C3CA6 /* Tips.storyboard */; };
+		8E55B1B7267B651A001C3CA6 /* TipsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B1B4267B651A001C3CA6 /* TipsTVC.swift */; };
+		8E55B1B8267B651A001C3CA6 /* TipsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B1B5267B651A001C3CA6 /* TipsVC.swift */; };
+		8E55B1B9267B651A001C3CA6 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B1B6267B651A001C3CA6 /* DetailVC.swift */; };
+		8E55B1BB267B6525001C3CA6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B1BA267B6525001C3CA6 /* Model.swift */; };
+		8E55B1C0267B6548001C3CA6 /* DetailInformationPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B1BC267B6548001C3CA6 /* DetailInformationPageVC.swift */; };
+		8E55B1C1267B6548001C3CA6 /* TableTrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B1BD267B6548001C3CA6 /* TableTrackTableViewCell.swift */; };
+		8E55B1C2267B6548001C3CA6 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B1BE267B6548001C3CA6 /* NetworkRequest.swift */; };
+		8E55B1C3267B6548001C3CA6 /* WeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B1BF267B6548001C3CA6 /* WeatherCollectionViewCell.swift */; };
+		8E55B1C5267B6554001C3CA6 /* DetailInformationPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E55B1C4267B6554001C3CA6 /* DetailInformationPage.storyboard */; };
+		8E55B1C7267B65E2001C3CA6 /* ModelNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B1C6267B65E2001C3CA6 /* ModelNetworkRequest.swift */; };
+		8E55B1CB267B8EA5001C3CA6 /* Saved.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E55B1CA267B8EA5001C3CA6 /* Saved.storyboard */; };
+		8E55B1CF267B98FA001C3CA6 /* SavedTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E55B1CE267B98FA001C3CA6 /* SavedTVC.swift */; };
+		8E8070F2267C39EA00C7F554 /* TrackEmergencyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8070F1267C39EA00C7F554 /* TrackEmergencyInfoViewController.swift */; };
+		8E8070F7267C3B2700C7F554 /* TrackEmergencyInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8070F6267C3B2700C7F554 /* TrackEmergencyInfo.storyboard */; };
+		8E8070F9267C4D3300C7F554 /* DownloadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8070F8267C4D3300C7F554 /* DownloadVC.swift */; };
+		8E9F87D0266D1195007E7375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9F87CF266D1195007E7375 /* AppDelegate.swift */; };
+		8E9F87D2266D1195007E7375 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9F87D1266D1195007E7375 /* SceneDelegate.swift */; };
+		8E9F87D4266D1195007E7375 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9F87D3266D1195007E7375 /* ViewController.swift */; };
+		8E9F87D7266D1195007E7375 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9F87D5266D1195007E7375 /* Main.storyboard */; };
+		8E9F87DA266D1195007E7375 /* TerraSafe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E9F87D8266D1195007E7375 /* TerraSafe.xcdatamodeld */; };
+		8E9F87DC266D1196007E7375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9F87DB266D1196007E7375 /* Assets.xcassets */; };
+		8E9F87DF266D1196007E7375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9F87DD266D1196007E7375 /* LaunchScreen.storyboard */; };
+		B78A5E63267387980021BCF0 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5E62267387980021BCF0 /* MapsViewController.swift */; };
+		B78A5E68267714C60021BCF0 /* PosImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5E66267714C60021BCF0 /* PosImageCollectionViewCell.swift */; };
+		B78A5E69267714C60021BCF0 /* PosImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A5E67267714C60021BCF0 /* PosImageCollectionViewCell.xib */; };
+		B78A5E6C2677155D0021BCF0 /* PosImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5E6B2677155D0021BCF0 /* PosImages.swift */; };
+		B78A5E8226771F3B0021BCF0 /* PosFacilitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5E8026771F3B0021BCF0 /* PosFacilitiesCollectionViewCell.swift */; };
+		B78A5E8326771F3B0021BCF0 /* PosFacilitiesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A5E8126771F3B0021BCF0 /* PosFacilitiesCollectionViewCell.xib */; };
+		B78A5E8726771F460021BCF0 /* PosDangerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5E8526771F460021BCF0 /* PosDangerCollectionViewCell.swift */; };
+		B78A5E8826771F460021BCF0 /* PosDangerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A5E8626771F460021BCF0 /* PosDangerCollectionViewCell.xib */; };
+		B78A5E8B2677206F0021BCF0 /* PosFacilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5E8A2677206F0021BCF0 /* PosFacilities.swift */; };
+		B78A5E8E2677207F0021BCF0 /* PosDangers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5E8D2677207F0021BCF0 /* PosDangers.swift */; };
+		B78A5F412677AB960021BCF0 /* WisataImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5F3F2677AB960021BCF0 /* WisataImageCollectionViewCell.swift */; };
+		B78A5F422677AB960021BCF0 /* WisataImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A5F402677AB960021BCF0 /* WisataImageCollectionViewCell.xib */; };
+		B78A5F472677AC1A0021BCF0 /* WisataFacilitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5F452677AC1A0021BCF0 /* WisataFacilitiesCollectionViewCell.swift */; };
+		B78A5F482677AC1A0021BCF0 /* WisataFacilitiesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A5F462677AC1A0021BCF0 /* WisataFacilitiesCollectionViewCell.xib */; };
+		B78A5F4C2677AC360021BCF0 /* WisataDangerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5F4A2677AC360021BCF0 /* WisataDangerCollectionViewCell.swift */; };
+		B78A5F4D2677AC360021BCF0 /* WisataDangerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78A5F4B2677AC360021BCF0 /* WisataDangerCollectionViewCell.xib */; };
+		B78A5F522677B1CA0021BCF0 /* WisataImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5F512677B1CA0021BCF0 /* WisataImages.swift */; };
+		B78A5F552677B2240021BCF0 /* WisataFacilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5F542677B2240021BCF0 /* WisataFacilities.swift */; };
+		B78A5F582677B2300021BCF0 /* WisataDangers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5F572677B2300021BCF0 /* WisataDangers.swift */; };
+		B78A5F5E2678D0DF0021BCF0 /* Initial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5F5D2678D0DF0021BCF0 /* Initial.swift */; };
+		B7DFE9C9267163230025433C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DFE9C8267163230025433C /* Home.storyboard */; };
+		B7DFE9CC2671637B0025433C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFE9CB2671637B0025433C /* HomeViewController.swift */; };
+		B7DFE9D0267164A60025433C /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFE9CE267164A60025433C /* HomeCollectionViewCell.swift */; };
+		B7DFE9D1267164A60025433C /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7DFE9CF267164A60025433C /* HomeCollectionViewCell.xib */; };
+		B7DFE9E6267171600025433C /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFE9E5267171600025433C /* TracksViewController.swift */; };
+		B7DFE9EE2671762F0025433C /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFE9EC2671762F0025433C /* TrackTableViewCell.swift */; };
+		B7DFE9EF2671762F0025433C /* TrackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7DFE9ED2671762F0025433C /* TrackTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2088D806C9FE95FA443BEE87 /* Pods-TerraSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerraSafe.debug.xcconfig"; path = "Target Support Files/Pods-TerraSafe/Pods-TerraSafe.debug.xcconfig"; sourceTree = "<group>"; };
+		29523B43267776F700E194C8 /* mountain.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mountain.json; sourceTree = "<group>"; };
+		297C07B2266FDCFB00885885 /* g1t1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = g1t1.json; sourceTree = "<group>"; };
+		297C07B4266FE7D700885885 /* bc_TrackEmergencyInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bc_TrackEmergencyInfoVC.swift; path = TerraSafe/bc_TrackEmergencyInfoVC.swift; sourceTree = SOURCE_ROOT; };
+		29B548A32678C31A000D8821 /* Checkpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Checkpoint.swift; path = TerraSafe/Checkpoint.swift; sourceTree = SOURCE_ROOT; };
+		6703BE07E154C10F0D9CCEA9 /* Pods-TerraSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerraSafe.release.xcconfig"; path = "Target Support Files/Pods-TerraSafe/Pods-TerraSafe.release.xcconfig"; sourceTree = "<group>"; };
+		8E3F82082679E736005DBA59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TerraSafe/Base.lproj/sampleNewTabPage.storyboard; sourceTree = "<group>"; };
+		8E55B1B2267B650F001C3CA6 /* Tips.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tips.storyboard; sourceTree = "<group>"; };
+		8E55B1B4267B651A001C3CA6 /* TipsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsTVC.swift; sourceTree = "<group>"; };
+		8E55B1B5267B651A001C3CA6 /* TipsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsVC.swift; sourceTree = "<group>"; };
+		8E55B1B6267B651A001C3CA6 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		8E55B1BA267B6525001C3CA6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8E55B1BC267B6548001C3CA6 /* DetailInformationPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInformationPageVC.swift; sourceTree = "<group>"; };
+		8E55B1BD267B6548001C3CA6 /* TableTrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTrackTableViewCell.swift; sourceTree = "<group>"; };
+		8E55B1BE267B6548001C3CA6 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		8E55B1BF267B6548001C3CA6 /* WeatherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		8E55B1C4267B6554001C3CA6 /* DetailInformationPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailInformationPage.storyboard; sourceTree = "<group>"; };
+		8E55B1C6267B65E2001C3CA6 /* ModelNetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelNetworkRequest.swift; sourceTree = "<group>"; };
+		8E55B1C8267B6D4C001C3CA6 /* PosFacilitiesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PosFacilitiesCollectionViewCell.xib; sourceTree = "<group>"; };
+		8E55B1CA267B8EA5001C3CA6 /* Saved.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Saved.storyboard; sourceTree = "<group>"; };
+		8E55B1CE267B98FA001C3CA6 /* SavedTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTVC.swift; sourceTree = "<group>"; };
+		8E8070F1267C39EA00C7F554 /* TrackEmergencyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackEmergencyInfoViewController.swift; path = TerraSafe/TrackEmergencyInfo/Controller/TrackEmergencyInfoViewController.swift; sourceTree = SOURCE_ROOT; };
+		8E8070F6267C3B2700C7F554 /* TrackEmergencyInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TrackEmergencyInfo.storyboard; sourceTree = "<group>"; };
+		8E8070F8267C4D3300C7F554 /* DownloadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadVC.swift; sourceTree = "<group>"; };
+		8E9F87CC266D1195007E7375 /* TerraSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerraSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E9F87CF266D1195007E7375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E9F87D1266D1195007E7375 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8E9F87D3266D1195007E7375 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E9F87D6266D1195007E7375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E9F87D9266D1195007E7375 /* TerraSafe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TerraSafe.xcdatamodel; sourceTree = "<group>"; };
+		8E9F87DB266D1196007E7375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E9F87DE266D1196007E7375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E9F87E0266D1196007E7375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B78A5E62267387980021BCF0 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		B78A5E66267714C60021BCF0 /* PosImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B78A5E67267714C60021BCF0 /* PosImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		B78A5E6B2677155D0021BCF0 /* PosImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosImages.swift; sourceTree = "<group>"; };
+		B78A5E8026771F3B0021BCF0 /* PosFacilitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosFacilitiesCollectionViewCell.swift; sourceTree = "<group>"; };
+		B78A5E8126771F3B0021BCF0 /* PosFacilitiesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosFacilitiesCollectionViewCell.xib; sourceTree = "<group>"; };
+		B78A5E8526771F460021BCF0 /* PosDangerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosDangerCollectionViewCell.swift; sourceTree = "<group>"; };
+		B78A5E8626771F460021BCF0 /* PosDangerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosDangerCollectionViewCell.xib; sourceTree = "<group>"; };
+		B78A5E8A2677206F0021BCF0 /* PosFacilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosFacilities.swift; sourceTree = "<group>"; };
+		B78A5E8D2677207F0021BCF0 /* PosDangers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosDangers.swift; sourceTree = "<group>"; };
+		B78A5F3F2677AB960021BCF0 /* WisataImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WisataImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B78A5F402677AB960021BCF0 /* WisataImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WisataImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		B78A5F452677AC1A0021BCF0 /* WisataFacilitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WisataFacilitiesCollectionViewCell.swift; sourceTree = "<group>"; };
+		B78A5F462677AC1A0021BCF0 /* WisataFacilitiesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WisataFacilitiesCollectionViewCell.xib; sourceTree = "<group>"; };
+		B78A5F4A2677AC360021BCF0 /* WisataDangerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WisataDangerCollectionViewCell.swift; sourceTree = "<group>"; };
+		B78A5F4B2677AC360021BCF0 /* WisataDangerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WisataDangerCollectionViewCell.xib; sourceTree = "<group>"; };
+		B78A5F512677B1CA0021BCF0 /* WisataImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WisataImages.swift; sourceTree = "<group>"; };
+		B78A5F542677B2240021BCF0 /* WisataFacilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WisataFacilities.swift; sourceTree = "<group>"; };
+		B78A5F572677B2300021BCF0 /* WisataDangers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WisataDangers.swift; sourceTree = "<group>"; };
+		B78A5F5D2678D0DF0021BCF0 /* Initial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
+		B7DFE9C8267163230025433C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		B7DFE9CB2671637B0025433C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B7DFE9CE267164A60025433C /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		B7DFE9CF267164A60025433C /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		B7DFE9E5267171600025433C /* TracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
+		B7DFE9EC2671762F0025433C /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		B7DFE9ED2671762F0025433C /* TrackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackTableViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E9F87C9266D1195007E7375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19A26EEF51F23183FF392199 /* (null) in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0478D681C012787FA8253012 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EB57BF2C2C9D6E82B3C7673 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2088D806C9FE95FA443BEE87 /* Pods-TerraSafe.debug.xcconfig */,
+				6703BE07E154C10F0D9CCEA9 /* Pods-TerraSafe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8E8070F3267C3A4E00C7F554 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E8070F6267C3B2700C7F554 /* TrackEmergencyInfo.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E9F87C3266D1195007E7375 = {
+			isa = PBXGroup;
+			children = (
+				8E3F82072679E736005DBA59 /* sampleNewTabPage.storyboard */,
+				8E9F87CE266D1195007E7375 /* TerraSafe */,
+				8E9F87CD266D1195007E7375 /* Products */,
+				6EB57BF2C2C9D6E82B3C7673 /* Pods */,
+				0478D681C012787FA8253012 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8E9F87CD266D1195007E7375 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E9F87CC266D1195007E7375 /* TerraSafe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E9F87CE266D1195007E7375 /* TerraSafe */ = {
+			isa = PBXGroup;
+			children = (
+				B7DFE9C4267162890025433C /* Home Page */,
+				8E9F87F2266D12A3007E7375 /* Track Emergency Info Page */,
+				8E9F87E8266D1246007E7375 /* Tips Page */,
+				8E9F87E7266D123E007E7375 /* Saved Page */,
+				8E9F87E6266D11AF007E7375 /* Detail Information Page */,
+				8E9F87CF266D1195007E7375 /* AppDelegate.swift */,
+				8E9F87D1266D1195007E7375 /* SceneDelegate.swift */,
+				8E9F87D3266D1195007E7375 /* ViewController.swift */,
+				8E9F87D5266D1195007E7375 /* Main.storyboard */,
+				8E9F87DB266D1196007E7375 /* Assets.xcassets */,
+				8E9F87DD266D1196007E7375 /* LaunchScreen.storyboard */,
+				8E9F87E0266D1196007E7375 /* Info.plist */,
+				8E9F87D8266D1195007E7375 /* TerraSafe.xcdatamodeld */,
+				297C07B2266FDCFB00885885 /* g1t1.json */,
+				29523B43267776F700E194C8 /* mountain.json */,
+			);
+			path = TerraSafe;
+			sourceTree = "<group>";
+		};
+		8E9F87E6266D11AF007E7375 /* Detail Information Page */ = {
+			isa = PBXGroup;
+			children = (
+				8E9F87EF266D1268007E7375 /* Controller */,
+				8E9F87F0266D1268007E7375 /* View */,
+				8E9F87F1266D1268007E7375 /* Model */,
+			);
+			path = "Detail Information Page";
+			sourceTree = "<group>";
+		};
+		8E9F87E7266D123E007E7375 /* Saved Page */ = {
+			isa = PBXGroup;
+			children = (
+				8E9F87EC266D1265007E7375 /* Controller */,
+				8E9F87ED266D1265007E7375 /* View */,
+				8E9F87EE266D1265007E7375 /* Model */,
+			);
+			path = "Saved Page";
+			sourceTree = "<group>";
+		};
+		8E9F87E8266D1246007E7375 /* Tips Page */ = {
+			isa = PBXGroup;
+			children = (
+				8E9F87EB266D125B007E7375 /* Controller */,
+				8E9F87EA266D1257007E7375 /* View */,
+				8E9F87E9266D124E007E7375 /* Model */,
+			);
+			path = "Tips Page";
+			sourceTree = "<group>";
+		};
+		8E9F87E9266D124E007E7375 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E55B1BA267B6525001C3CA6 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E9F87EA266D1257007E7375 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E55B1B2267B650F001C3CA6 /* Tips.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E9F87EB266D125B007E7375 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E55B1B6267B651A001C3CA6 /* DetailVC.swift */,
+				8E55B1B4267B651A001C3CA6 /* TipsTVC.swift */,
+				8E55B1B5267B651A001C3CA6 /* TipsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E9F87EC266D1265007E7375 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E55B1CE267B98FA001C3CA6 /* SavedTVC.swift */,
+				8E8070F8267C4D3300C7F554 /* DownloadVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E9F87ED266D1265007E7375 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E55B1CA267B8EA5001C3CA6 /* Saved.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E9F87EE266D1265007E7375 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E9F87EF266D1268007E7375 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E55B1BC267B6548001C3CA6 /* DetailInformationPageVC.swift */,
+				8E55B1BE267B6548001C3CA6 /* NetworkRequest.swift */,
+				8E55B1BD267B6548001C3CA6 /* TableTrackTableViewCell.swift */,
+				8E55B1BF267B6548001C3CA6 /* WeatherCollectionViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E9F87F0266D1268007E7375 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E55B1C4267B6554001C3CA6 /* DetailInformationPage.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E9F87F1266D1268007E7375 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E55B1C6267B65E2001C3CA6 /* ModelNetworkRequest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E9F87F2266D12A3007E7375 /* Track Emergency Info Page */ = {
+			isa = PBXGroup;
+			children = (
+				8E8070F3267C3A4E00C7F554 /* View */,
+				8E9F87F3266D12BC007E7375 /* Controller */,
+				8E9F87F4266D12BC007E7375 /* Model */,
+			);
+			path = "Track Emergency Info Page";
+			sourceTree = "<group>";
+		};
+		8E9F87F3266D12BC007E7375 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				297C07B4266FE7D700885885 /* bc_TrackEmergencyInfoVC.swift */,
+				8E8070F1267C39EA00C7F554 /* TrackEmergencyInfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E9F87F4266D12BC007E7375 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				29B548A32678C31A000D8821 /* Checkpoint.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B78A5E7126771BB70021BCF0 /* DetailTrackPos */ = {
+			isa = PBXGroup;
+			children = (
+				B78A5E66267714C60021BCF0 /* PosImageCollectionViewCell.swift */,
+				B78A5E8526771F460021BCF0 /* PosDangerCollectionViewCell.swift */,
+				B78A5E8026771F3B0021BCF0 /* PosFacilitiesCollectionViewCell.swift */,
+			);
+			path = DetailTrackPos;
+			sourceTree = "<group>";
+		};
+		B78A5E7326771DDA0021BCF0 /* DetailTrackPosView */ = {
+			isa = PBXGroup;
+			children = (
+				B78A5E67267714C60021BCF0 /* PosImageCollectionViewCell.xib */,
+				B78A5E8126771F3B0021BCF0 /* PosFacilitiesCollectionViewCell.xib */,
+				B78A5E8626771F460021BCF0 /* PosDangerCollectionViewCell.xib */,
+			);
+			path = DetailTrackPosView;
+			sourceTree = "<group>";
+		};
+		B78A5E9126772B130021BCF0 /* DetailTrackWisata */ = {
+			isa = PBXGroup;
+			children = (
+				B78A5F3F2677AB960021BCF0 /* WisataImageCollectionViewCell.swift */,
+				B78A5F452677AC1A0021BCF0 /* WisataFacilitiesCollectionViewCell.swift */,
+				B78A5F4A2677AC360021BCF0 /* WisataDangerCollectionViewCell.swift */,
+			);
+			path = DetailTrackWisata;
+			sourceTree = "<group>";
+		};
+		B78A5F3E2677AA120021BCF0 /* DetailTrackWisataView */ = {
+			isa = PBXGroup;
+			children = (
+				B78A5F402677AB960021BCF0 /* WisataImageCollectionViewCell.xib */,
+				B78A5F462677AC1A0021BCF0 /* WisataFacilitiesCollectionViewCell.xib */,
+				B78A5F4B2677AC360021BCF0 /* WisataDangerCollectionViewCell.xib */,
+			);
+			path = DetailTrackWisataView;
+			sourceTree = "<group>";
+		};
+		B78A5F4F2677B15C0021BCF0 /* Pos */ = {
+			isa = PBXGroup;
+			children = (
+				B78A5E6B2677155D0021BCF0 /* PosImages.swift */,
+				B78A5E8A2677206F0021BCF0 /* PosFacilities.swift */,
+				B78A5E8D2677207F0021BCF0 /* PosDangers.swift */,
+			);
+			path = Pos;
+			sourceTree = "<group>";
+		};
+		B78A5F502677B18F0021BCF0 /* Wisata */ = {
+			isa = PBXGroup;
+			children = (
+				B78A5F512677B1CA0021BCF0 /* WisataImages.swift */,
+				B78A5F542677B2240021BCF0 /* WisataFacilities.swift */,
+				B78A5F572677B2300021BCF0 /* WisataDangers.swift */,
+			);
+			path = Wisata;
+			sourceTree = "<group>";
+		};
+		B7DFE9C4267162890025433C /* Home Page */ = {
+			isa = PBXGroup;
+			children = (
+				B78A5F5D2678D0DF0021BCF0 /* Initial.swift */,
+				B7DFE9C5267162930025433C /* Model */,
+				B7DFE9C6267162A00025433C /* View */,
+				B7DFE9C7267162A60025433C /* Controller */,
+			);
+			path = "Home Page";
+			sourceTree = "<group>";
+		};
+		B7DFE9C5267162930025433C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B78A5F4F2677B15C0021BCF0 /* Pos */,
+				B78A5F502677B18F0021BCF0 /* Wisata */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7DFE9C6267162A00025433C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E55B1C8267B6D4C001C3CA6 /* PosFacilitiesCollectionViewCell.xib */,
+				B7DFE9C8267163230025433C /* Home.storyboard */,
+				B7DFE9CF267164A60025433C /* HomeCollectionViewCell.xib */,
+				B7DFE9ED2671762F0025433C /* TrackTableViewCell.xib */,
+				B78A5F3E2677AA120021BCF0 /* DetailTrackWisataView */,
+				B78A5E7326771DDA0021BCF0 /* DetailTrackPosView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7DFE9C7267162A60025433C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7DFE9CB2671637B0025433C /* HomeViewController.swift */,
+				B7DFE9E5267171600025433C /* TracksViewController.swift */,
+				B78A5E62267387980021BCF0 /* MapsViewController.swift */,
+				B7DFE9F726717B120025433C /* Cell */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B7DFE9F726717B120025433C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B7DFE9CE267164A60025433C /* HomeCollectionViewCell.swift */,
+				B7DFE9EC2671762F0025433C /* TrackTableViewCell.swift */,
+				B78A5E7126771BB70021BCF0 /* DetailTrackPos */,
+				B78A5E9126772B130021BCF0 /* DetailTrackWisata */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E9F87CB266D1195007E7375 /* TerraSafe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E9F87E3266D1196007E7375 /* Build configuration list for PBXNativeTarget "TerraSafe" */;
+			buildPhases = (
+				0CF2F973046A3F4ADA5A61C4 /* [CP] Check Pods Manifest.lock */,
+				8E9F87C8266D1195007E7375 /* Sources */,
+				8E9F87C9266D1195007E7375 /* Frameworks */,
+				8E9F87CA266D1195007E7375 /* Resources */,
+				AB82EBD2CFC2300E17F44707 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TerraSafe;
+			productName = TerraSafe;
+			productReference = 8E9F87CC266D1195007E7375 /* TerraSafe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E9F87C4266D1195007E7375 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					8E9F87CB266D1195007E7375 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 8E9F87C7266D1195007E7375 /* Build configuration list for PBXProject "TerraSafe" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E9F87C3266D1195007E7375;
+			productRefGroup = 8E9F87CD266D1195007E7375 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E9F87CB266D1195007E7375 /* TerraSafe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E9F87CA266D1195007E7375 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29523B44267776F700E194C8 /* mountain.json in Resources */,
+				297C07B3266FDCFB00885885 /* g1t1.json in Resources */,
+				8E3F82092679E736005DBA59 /* sampleNewTabPage.storyboard in Resources */,
+				B7DFE9EF2671762F0025433C /* TrackTableViewCell.xib in Resources */,
+				B7DFE9D1267164A60025433C /* HomeCollectionViewCell.xib in Resources */,
+				B78A5F422677AB960021BCF0 /* WisataImageCollectionViewCell.xib in Resources */,
+				B78A5F482677AC1A0021BCF0 /* WisataFacilitiesCollectionViewCell.xib in Resources */,
+				B78A5E8326771F3B0021BCF0 /* PosFacilitiesCollectionViewCell.xib in Resources */,
+				8E55B1B3267B650F001C3CA6 /* Tips.storyboard in Resources */,
+				B78A5E69267714C60021BCF0 /* PosImageCollectionViewCell.xib in Resources */,
+				B7DFE9C9267163230025433C /* Home.storyboard in Resources */,
+				B78A5F4D2677AC360021BCF0 /* WisataDangerCollectionViewCell.xib in Resources */,
+				B78A5E8826771F460021BCF0 /* PosDangerCollectionViewCell.xib in Resources */,
+				8E9F87DF266D1196007E7375 /* LaunchScreen.storyboard in Resources */,
+				8E9F87DC266D1196007E7375 /* Assets.xcassets in Resources */,
+				8E55B1CB267B8EA5001C3CA6 /* Saved.storyboard in Resources */,
+				8E55B1C5267B6554001C3CA6 /* DetailInformationPage.storyboard in Resources */,
+				8E8070F7267C3B2700C7F554 /* TrackEmergencyInfo.storyboard in Resources */,
+				8E9F87D7266D1195007E7375 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CF2F973046A3F4ADA5A61C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TerraSafe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB82EBD2CFC2300E17F44707 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TerraSafe/Pods-TerraSafe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TerraSafe/Pods-TerraSafe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TerraSafe/Pods-TerraSafe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E9F87C8266D1195007E7375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E55B1B8267B651A001C3CA6 /* TipsVC.swift in Sources */,
+				B78A5F5E2678D0DF0021BCF0 /* Initial.swift in Sources */,
+				B78A5E8226771F3B0021BCF0 /* PosFacilitiesCollectionViewCell.swift in Sources */,
+				B78A5E6C2677155D0021BCF0 /* PosImages.swift in Sources */,
+				B7DFE9CC2671637B0025433C /* HomeViewController.swift in Sources */,
+				8E55B1B9267B651A001C3CA6 /* DetailVC.swift in Sources */,
+				B78A5E8E2677207F0021BCF0 /* PosDangers.swift in Sources */,
+				8E9F87D4266D1195007E7375 /* ViewController.swift in Sources */,
+				B7DFE9E6267171600025433C /* TracksViewController.swift in Sources */,
+				8E55B1CF267B98FA001C3CA6 /* SavedTVC.swift in Sources */,
+				B7DFE9EE2671762F0025433C /* TrackTableViewCell.swift in Sources */,
+				8E9F87D0266D1195007E7375 /* AppDelegate.swift in Sources */,
+				8E8070F9267C4D3300C7F554 /* DownloadVC.swift in Sources */,
+				8E9F87D2266D1195007E7375 /* SceneDelegate.swift in Sources */,
+				8E55B1C1267B6548001C3CA6 /* TableTrackTableViewCell.swift in Sources */,
+				B78A5F582677B2300021BCF0 /* WisataDangers.swift in Sources */,
+				B78A5E8726771F460021BCF0 /* PosDangerCollectionViewCell.swift in Sources */,
+				8E55B1C3267B6548001C3CA6 /* WeatherCollectionViewCell.swift in Sources */,
+				8E9F87DA266D1195007E7375 /* TerraSafe.xcdatamodeld in Sources */,
+				B78A5F472677AC1A0021BCF0 /* WisataFacilitiesCollectionViewCell.swift in Sources */,
+				B78A5F522677B1CA0021BCF0 /* WisataImages.swift in Sources */,
+				8E55B1C7267B65E2001C3CA6 /* ModelNetworkRequest.swift in Sources */,
+				8E8070F2267C39EA00C7F554 /* TrackEmergencyInfoViewController.swift in Sources */,
+				B7DFE9D0267164A60025433C /* HomeCollectionViewCell.swift in Sources */,
+				8E55B1C0267B6548001C3CA6 /* DetailInformationPageVC.swift in Sources */,
+				B78A5E8B2677206F0021BCF0 /* PosFacilities.swift in Sources */,
+				8E55B1BB267B6525001C3CA6 /* Model.swift in Sources */,
+				B78A5F4C2677AC360021BCF0 /* WisataDangerCollectionViewCell.swift in Sources */,
+				B78A5E68267714C60021BCF0 /* PosImageCollectionViewCell.swift in Sources */,
+				8E55B1B7267B651A001C3CA6 /* TipsTVC.swift in Sources */,
+				B78A5F552677B2240021BCF0 /* WisataFacilities.swift in Sources */,
+				B78A5E63267387980021BCF0 /* MapsViewController.swift in Sources */,
+				B78A5F412677AB960021BCF0 /* WisataImageCollectionViewCell.swift in Sources */,
+				8E55B1C2267B6548001C3CA6 /* NetworkRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8E3F82072679E736005DBA59 /* sampleNewTabPage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E3F82082679E736005DBA59 /* Base */,
+			);
+			name = sampleNewTabPage.storyboard;
+			sourceTree = "<group>";
+		};
+		8E9F87D5266D1195007E7375 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E9F87D6266D1195007E7375 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E9F87DD266D1196007E7375 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E9F87DE266D1196007E7375 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E9F87E1266D1196007E7375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8E9F87E2266D1196007E7375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E9F87E4266D1196007E7375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2088D806C9FE95FA443BEE87 /* Pods-TerraSafe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DFYL38U338;
+				INFOPLIST_FILE = TerraSafe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = albertPersonalProject.TerraSafe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8E9F87E5266D1196007E7375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6703BE07E154C10F0D9CCEA9 /* Pods-TerraSafe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DFYL38U338;
+				INFOPLIST_FILE = TerraSafe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = albertPersonalProject.TerraSafe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E9F87C7266D1195007E7375 /* Build configuration list for PBXProject "TerraSafe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E9F87E1266D1196007E7375 /* Debug */,
+				8E9F87E2266D1196007E7375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E9F87E3266D1196007E7375 /* Build configuration list for PBXNativeTarget "TerraSafe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E9F87E4266D1196007E7375 /* Debug */,
+				8E9F87E5266D1196007E7375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8E9F87D8266D1195007E7375 /* TerraSafe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8E9F87D9266D1195007E7375 /* TerraSafe.xcdatamodel */,
+			);
+			currentVersion = 8E9F87D9266D1195007E7375 /* TerraSafe.xcdatamodel */;
+			path = TerraSafe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8E9F87C4266D1195007E7375 /* Project object */;
+}

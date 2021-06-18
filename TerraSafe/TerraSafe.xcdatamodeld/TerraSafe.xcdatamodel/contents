@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CollectionDanger" representedClassName="CollectionDanger" syncable="YES" codeGenerationType="class">
+        <attribute name="dangerImage" optional="YES" attributeType="String"/>
+        <attribute name="dangerName" optional="YES" attributeType="String"/>
+        <relationship name="pos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pos" inverseName="collectionDanger" inverseEntity="Pos"/>
+        <relationship name="wisata" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Wisata" inverseName="collectionDanger" inverseEntity="Wisata"/>
+    </entity>
+    <entity name="CollectionFacilities" representedClassName="CollectionFacilities" syncable="YES" codeGenerationType="class">
+        <attribute name="facilitiesImage" optional="YES" attributeType="String"/>
+        <attribute name="facilitiesName" optional="YES" attributeType="String"/>
+        <relationship name="pos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pos" inverseName="collectionFacilities" inverseEntity="Pos"/>
+        <relationship name="wisata" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Wisata" inverseName="collectionFacilities" inverseEntity="Wisata"/>
+    </entity>
+    <entity name="CollectionImagesPin" representedClassName="CollectionImagesPin" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <relationship name="pos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pos" inverseName="collectionImages" inverseEntity="Pos"/>
+        <relationship name="wisata" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Wisata" inverseName="collectionImages" inverseEntity="Wisata"/>
+    </entity>
+    <entity name="Mountain" representedClassName="Mountain" syncable="YES" codeGenerationType="class">
+        <attribute name="mountainDesc" optional="YES" attributeType="String"/>
+        <attribute name="mountainElevation" optional="YES" attributeType="String"/>
+        <attribute name="mountainImage" optional="YES" attributeType="String"/>
+        <attribute name="mountainLocation" optional="YES" attributeType="String"/>
+        <attribute name="mountainName" optional="YES" attributeType="String"/>
+        <attribute name="mountainTrackCount" optional="YES" attributeType="String"/>
+        <relationship name="track" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Track" inverseName="mountain" inverseEntity="Track"/>
+    </entity>
+    <entity name="Pos" representedClassName="Pos" syncable="YES" codeGenerationType="class">
+        <attribute name="posHourDate" optional="YES" attributeType="String"/>
+        <attribute name="posHourTime" optional="YES" attributeType="String"/>
+        <attribute name="posLength" optional="YES" attributeType="String"/>
+        <attribute name="posMdpl" optional="YES" attributeType="String"/>
+        <attribute name="posName" optional="YES" attributeType="String"/>
+        <attribute name="posTime" optional="YES" attributeType="String"/>
+        <attribute name="posTrackCondition" optional="YES" attributeType="String"/>
+        <relationship name="collectionDanger" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CollectionDanger" inverseName="pos" inverseEntity="CollectionDanger"/>
+        <relationship name="collectionFacilities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CollectionFacilities" inverseName="pos" inverseEntity="CollectionFacilities"/>
+        <relationship name="collectionImages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CollectionImagesPin" inverseName="pos" inverseEntity="CollectionImagesPin"/>
+        <relationship name="track" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Track" inverseName="pos" inverseEntity="Track"/>
+    </entity>
+    <entity name="Track" representedClassName="Track" syncable="YES" codeGenerationType="class">
+        <attribute name="bearing" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longtitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="maxNorthEastLat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="maxNorthEastLong" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="maxSouthWestLat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="maxSouthWestLong" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="trackLength" optional="YES" attributeType="String"/>
+        <attribute name="trackName" optional="YES" attributeType="String"/>
+        <attribute name="trackTime" optional="YES" attributeType="String"/>
+        <relationship name="mountain" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mountain" inverseName="track" inverseEntity="Mountain"/>
+        <relationship name="pos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pos" inverseName="track" inverseEntity="Pos"/>
+        <relationship name="wisata" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Wisata" inverseName="track" inverseEntity="Wisata"/>
+    </entity>
+    <entity name="Wisata" representedClassName="Wisata" syncable="YES" codeGenerationType="class">
+        <attribute name="wisataDesc" optional="YES" attributeType="String"/>
+        <attribute name="wisataName" optional="YES" attributeType="String"/>
+        <attribute name="wisataReach" optional="YES" attributeType="String"/>
+        <relationship name="collectionDanger" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CollectionDanger" inverseName="wisata" inverseEntity="CollectionDanger"/>
+        <relationship name="collectionFacilities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CollectionFacilities" inverseName="wisata" inverseEntity="CollectionFacilities"/>
+        <relationship name="collectionImages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CollectionImagesPin" inverseName="wisata" inverseEntity="CollectionImagesPin"/>
+        <relationship name="track" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Track" inverseName="wisata" inverseEntity="Track"/>
+    </entity>
+    <elements>
+        <element name="CollectionDanger" positionX="414.7622680664062" positionY="116.8396301269531" width="128" height="103"/>
+        <element name="CollectionFacilities" positionX="175.8717041015624" positionY="247.407958984375" width="128" height="103"/>
+        <element name="CollectionImagesPin" positionX="-65.2274169921875" positionY="241.8501892089844" width="128" height="88"/>
+        <element name="Mountain" positionX="182.3330688476562" positionY="-393.7142639160156" width="128" height="148"/>
+        <element name="Pos" positionX="-70.98095703125" positionY="-47.81829833984375" width="128" height="208"/>
+        <element name="Track" positionX="178.8157958984375" positionY="-128.2594757080078" width="128" height="238"/>
+        <element name="Wisata" positionX="570.9359130859375" positionY="-102.0874633789062" width="128" height="148"/>
+    </elements>
+</model>

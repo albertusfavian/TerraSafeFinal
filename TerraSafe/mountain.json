@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Gunung Papandayan",
+        "elevation": 3080,
+        "location": "Kabupaten Garut, Jawa Barat",
+        "geometry": {
+            "latitude": 71.0001921,
+            "longitude": -103.112390
+        }
+    },
+    {
+        "title": "Gunung Salak",
+        "elevation": 2001,
+        "location": "Kabupaten Bogor, Jawa Barat",
+        "geometry": {
+            "latitude": 51.0001921,
+            "longitude": -110.112390
+        }
+    }
+]
