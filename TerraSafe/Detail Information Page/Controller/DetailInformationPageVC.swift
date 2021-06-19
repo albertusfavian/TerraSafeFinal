@@ -6,9 +6,21 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var trackArray = [Track]()
+    var mountain = [Mountain]()
+    var trackName: String?
+    var bearing: Double?
+    var latitude: Double?
+    var longtitude: Double?
+    var maxNorthEastLat: Double?
+    var maxNorthEastLong: Double?
+    var maxSouthWestLat: Double?
+    var maxSouthWestLong: Double?
+
     
     
     @IBOutlet weak var tableTrack: UITableView!
@@ -32,8 +44,23 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
     var indexImage: Int = 0
     
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+//        print(selectedMountain!)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        // Restore the navigation bar to default
+        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        navigationController?.navigationBar.shadowImage = nil
+    }
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
         tableTrack.delegate = self
         tableTrack.dataSource = self
         weatherCollectionView.delegate = self
@@ -58,25 +85,17 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
         
         
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
         
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        // Restore the navigation bar to default
-        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        navigationController?.navigationBar.shadowImage = nil
+        loadTrack()
+        
+   
     }
 
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return trackArray.count
+    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,13 +105,30 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
         cell?.layer.borderWidth = 3
         cell?.layer.borderColor = tableView.backgroundColor?.cgColor
         cell?.contentView.backgroundColor = UIColor.green
-        cell?.trackNameLabel.text = "Sirah Kencong"
-        cell?.hourLabel.text = "3hour"
+        cell?.trackNameLabel.text = trackArray[indexPath.row].trackName
+        cell?.hourLabel.text = trackArray[indexPath.row].trackTime
+        cell?.lengthLabel.text   = trackArray[indexPath.row].trackLength
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        trackName = trackArray[indexPath.row].trackName
+        bearing = trackArray[indexPath.row].bearing
+        latitude = trackArray[indexPath.row].latitude
+        longtitude = trackArray[indexPath.row].longtitude
+        maxNorthEastLat = trackArray[indexPath.row].maxNorthEastLat
+        maxNorthEastLong = trackArray[indexPath.row].maxNorthEastLong
+        maxSouthWestLat = trackArray[indexPath.row].maxSouthWestLat
+        maxSouthWestLong = trackArray[indexPath.row].maxSouthWestLong
+        
+        
         self.performSegue(withIdentifier: "goToMap", sender: nil)
+        
+        
+        
+        
+        
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -120,17 +156,33 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let controllerMap = segue.destination as? TrackEmergencyInfoViewController {
-            print(controllerMap)
-            print(listTemp[0])
-            
-            controllerMap.temp = String(listTemp[0])
-            controllerMap.date = listDate[0]
-            controllerMap.distance = ""
-            controllerMap.duration = ""
+        if let controllerMap = segue.destination as? MapsViewController {
+            controllerMap.trackName = trackName!
+            controllerMap.bearing = bearing!
+            controllerMap.longtitude = longtitude!
+            controllerMap.latitude = latitude!
+            controllerMap.maxNorthEastLong = maxNorthEastLong!
+            controllerMap.maxNorthEastLat = maxNorthEastLat!
+            controllerMap.maxSouthWestLong = maxSouthWestLong!
+            controllerMap.maxSouthWestLat = maxSouthWestLat!
+        
         }
         
+        
     }
+    
+    func loadTrack(){
+        let request : NSFetchRequest<Track> = Track.fetchRequest()
+        let predicate = NSPredicate(format: "mountain.mountainName MATCHES %@", mountainNameVar)
+        request.predicate = predicate
+        do {
+            trackArray = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+        }
+        tableTrack.reloadData()
+    }
+    
     /*
     // MARK: - Navigation
 
