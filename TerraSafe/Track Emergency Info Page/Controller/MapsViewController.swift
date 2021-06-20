@@ -6,11 +6,20 @@
 //
 
 import UIKit
+import CoreData
 
 class MapsViewController: UIViewController{
-
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     // Special pake telor buat bang rony
-    var track: Track?
+    var trackName: String?
+    var bearing: Double?
+    var latitude: Double?
+    var longtitude: Double?
+    var maxNorthEastLat: Double?
+    var maxNorthEastLong: Double?
+    var maxSouthWestLat: Double?
+    var maxSouthWestLong: Double?
     
     
     
@@ -27,6 +36,9 @@ class MapsViewController: UIViewController{
     @IBOutlet weak var wisataImages: UICollectionView!
     @IBOutlet weak var wisataFacilities: UICollectionView!
     @IBOutlet weak var wisataDangers: UICollectionView!
+    
+    @IBOutlet weak var posTitle: UILabel!
+    @IBOutlet weak var posDesc: UILabel!
     
     
     
@@ -49,6 +61,7 @@ class MapsViewController: UIViewController{
         
         let nib23 = UINib(nibName: "\(WisataDangerCollectionViewCell.self)", bundle: nil)
         wisataDangers.register(nib23, forCellWithReuseIdentifier: "wisataDangerCell")
+        print(trackName!)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -60,84 +73,168 @@ class MapsViewController: UIViewController{
             self.wisataDrawerView.isHidden = true
             self.posDrawerView.isHidden = true
         }
+    
     }
 
     
-    // MARK: -Data Manipulation
-    let PosImages = [
-        posImagesData(posImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        posImagesData(posImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        posImagesData(posImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        posImagesData(posImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        posImagesData(posImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        posImagesData(posImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        posImagesData(posImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        posImagesData(posImage: #imageLiteral(resourceName: "Logo Onboarding"))
+//     MARK: -Data Manipulation
+    var PosImages = [
+        posImagesData(posImage: UIImage(named: "img_pondok_saladah_1")!),
+        posImagesData(posImage: UIImage(named: "img_pondok_saladah_2")!),
+        posImagesData(posImage: UIImage(named: "img_pondok_saladah_3")!)
     ]
-    
-    let PosFacilities = [
-        posFacilitiesData(posFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), posFacilitiesTitle: "Toilet"),
-        posFacilitiesData(posFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), posFacilitiesTitle: "Toilet"),
-        posFacilitiesData(posFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), posFacilitiesTitle: "Toilet"),
-        posFacilitiesData(posFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), posFacilitiesTitle: "Toilet"),
-        posFacilitiesData(posFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), posFacilitiesTitle: "Toilet"),
-        posFacilitiesData(posFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), posFacilitiesTitle: "Toilet")
-    
-    ]
-    
-    let PosDangers = [
-        posDangersData(posDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), posDangerTitle: "Babi"),
-        posDangersData(posDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), posDangerTitle: "Babi"),
-        posDangersData(posDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), posDangerTitle: "Babi"),
-        posDangersData(posDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), posDangerTitle: "Babi"),
-        posDangersData(posDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), posDangerTitle: "Babi"),
-        posDangersData(posDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), posDangerTitle: "Babi"),
-        posDangersData(posDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), posDangerTitle: "Babi")
-    ]
-    
-    let WisataImages = [
-        wisataImagesData(wisataImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        wisataImagesData(wisataImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        wisataImagesData(wisataImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        wisataImagesData(wisataImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        wisataImagesData(wisataImage: #imageLiteral(resourceName: "Logo Onboarding")),
-        wisataImagesData(wisataImage: #imageLiteral(resourceName: "Logo Onboarding"))
-    ]
-    
-    let WisataFacilities = [
-        wisataFacilitiesData(wisataFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), wisataFacilitiesTitle: "Toilet"),
-        wisataFacilitiesData(wisataFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), wisataFacilitiesTitle: "Toilet"),
-        wisataFacilitiesData(wisataFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), wisataFacilitiesTitle: "Toilet"),
-        wisataFacilitiesData(wisataFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), wisataFacilitiesTitle: "Toilet"),
-        wisataFacilitiesData(wisataFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), wisataFacilitiesTitle: "Toilet"),
-        wisataFacilitiesData(wisataFacilitiesImage: #imageLiteral(resourceName: "Logo Onboarding"), wisataFacilitiesTitle: "Toilet")
-    ]
-    
-    let WisataDangers = [
-        wisataDangersData(wisataDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), wisataDangerTitle: "Badak"),
-        wisataDangersData(wisataDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), wisataDangerTitle: "Badak"),
-        wisataDangersData(wisataDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), wisataDangerTitle: "Badak"),
-        wisataDangersData(wisataDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), wisataDangerTitle: "Badak"),
-        wisataDangersData(wisataDangerImage: #imageLiteral(resourceName: "Logo Onboarding"), wisataDangerTitle: "Badak")
-    ]
-    
 
+    var PosFacilities = [
+        posFacilitiesData(posFacilitiesImage: UIImage(named: "Water drop icon")!, posFacilitiesTitle: "Water Source"),
+        posFacilitiesData(posFacilitiesImage: UIImage(named: "Registration icon")!, posFacilitiesTitle: "Registration"),
+        posFacilitiesData(posFacilitiesImage: UIImage(named: "Parking slot icon")!, posFacilitiesTitle: "Parking Slot"),
+        posFacilitiesData(posFacilitiesImage: UIImage(named: "Waroeng icon")!, posFacilitiesTitle: "Waroeng"),
+        posFacilitiesData(posFacilitiesImage: UIImage(named: "Camp icon")!, posFacilitiesTitle: "Camp")
+
+    ]
+
+    var PosDangers = [
+        posDangersData(posDangerImage: UIImage(named: "Boar icon")!, posDangerTitle: "Boar")
+    ]
+
+    var WisataImages = [
+        wisataImagesData(wisataImage: #imageLiteral(resourceName: "img_tegal_alun_1")),
+        wisataImagesData(wisataImage: #imageLiteral(resourceName: "SignForLost.4")),
+        wisataImagesData(wisataImage: #imageLiteral(resourceName: "TerrainCondition.5"))
+    ]
+
+    var WisataFacilities = [
+        wisataFacilitiesData(wisataFacilitiesImage: #imageLiteral(resourceName: "Water drop icon"), wisataFacilitiesTitle: "Water Source"),
+        wisataFacilitiesData(wisataFacilitiesImage: UIImage(named: "Photo icon")!, wisataFacilitiesTitle: "Photo Spot")
+    ]
+
+    var WisataDangers = [
+        wisataDangersData(wisataDangerImage: UIImage(named: "Sulphuric icon")!, wisataDangerTitle: "Sulphuric Atmosphere"),
+        wisataDangersData(wisataDangerImage: UIImage(named: "Fog icon")!, wisataDangerTitle: "Occasional Thick Fog"),
+        wisataDangersData(wisataDangerImage: UIImage(named: "Eruption icon")!, wisataDangerTitle: "Occasional Eruption")
+    ]
     
+    
+//    func loadTrack(){
+//        let request : NSFetchRequest<Track> = Track.fetchRequest()
+//        let predicate = NSPredicate(format: "arrayTrack.trackName MATCHES %@", trackName!)
+//        request.predicate = predicate
+//        do {
+//            arrayTrack = try context.fetch(request)
+//        } catch {
+//            print("Error fetching data from context \(error)")
+//        }
+//    }
+//
+//    func loadPos(){
+//        let request : NSFetchRequest<Pos> = Pos.fetchRequest()
+//        let predicate = NSPredicate(format: "Track.trackName MATCHES %@", trackName!)
+//        request.predicate = predicate
+//        do {
+//            arrayPos = try context.fetch(request)
+//        } catch {
+//            print("Error fetching data from context \(error)")
+//        }
+//    }
+    func removeAll(){
+        PosImages.removeAll()
+        PosFacilities.removeAll()
+        PosDangers.removeAll()
+    }
+    func loadPos2(){
+        posTitle.text = "Pos 2 (Camp Pondok Salada)"
+        posDesc.text = "Steep and slippery on some track location, with reports about possible landslide. Be cautious along the track."
+        PosImages = [
+            posImagesData(posImage: UIImage(named: "img_pondok_saladah_1")!),
+            posImagesData(posImage: UIImage(named: "img_pondok_saladah_2")!),
+            posImagesData(posImage: UIImage(named: "img_pondok_saladah_3")!)
+        ]
+        PosFacilities = [
+            posFacilitiesData(posFacilitiesImage: UIImage(named: "Water drop icon")!, posFacilitiesTitle: "Water Source"),
+            posFacilitiesData(posFacilitiesImage: UIImage(named: "Waroeng icon")!, posFacilitiesTitle: "Waroeng"),
+            posFacilitiesData(posFacilitiesImage: UIImage(named: "Camp icon")!, posFacilitiesTitle: "Camp")
+
+        ]
+
+        PosDangers = [
+            posDangersData(posDangerImage: UIImage(named: "Boar icon")!, posDangerTitle: "Boar"),
+            posDangersData(posDangerImage: UIImage(named: "Black panther icon")!, posDangerTitle: "Black Panther")
+        ]
+        posImages.reloadData()
+        posDangers.reloadData()
+        posFacilities.reloadData()
+    }
+    
+    func loadPos3(){
+        posTitle.text = "Pos 3 (Tegal Alun)"
+        posDesc.text = "Slippery on some location, with sulphur aroma dominating the atmosphere. Be cautious along the track and use face mask to protect respiratory systems. This is the last post before reaching the summit, prepare in advance."
+        PosImages = [
+            posImagesData(posImage: UIImage(named: "img_tegal_alun_1")!),
+            posImagesData(posImage: UIImage(named: "img_tegal_alun_2")!),
+            posImagesData(posImage: UIImage(named: "img_pondok_saladah_3")!)
+        ]
+        PosFacilities = [
+            posFacilitiesData(posFacilitiesImage: UIImage(named: "Water drop icon")!, posFacilitiesTitle: "Water Source"),
+            posFacilitiesData(posFacilitiesImage: UIImage(named: "Edelweiss icon")!, posFacilitiesTitle: "Edelweiss")
+
+        ]
+
+        PosDangers = [
+            posDangersData(posDangerImage: UIImage(named: "Sulphuric icon")!, posDangerTitle: "Sulphur"),
+            posDangersData(posDangerImage: UIImage(named: "Fog icon")!, posDangerTitle: "Fog")
+        ]
+        posImages.reloadData()
+        posDangers.reloadData()
+        posFacilities.reloadData()
+    }
     
     
     
     // MARK: -Drawer Setup
+    // tinggal di ganti conditionnya bang (Sorry manual, rada ngejer waktu bang)
     @IBAction func popup(_ sender: UIButton) {
-        if  sender.titleLabel?.text == "Pos"{
+        if  sender.titleLabel?.text == "Pos1"{
+            dragview.center = CGPoint(x: dragview.center.x, y: 2000)
+            posDrawerView.isHidden = false
+            wisataDrawerView.isHidden = true
+        }else if sender.titleLabel?.text == "Pos2"{
+            dragview.center = CGPoint(x: dragview.center.x, y: 2000)
+            removeAll()
+            loadPos2()
+            posDrawerView.isHidden = false
+            wisataDrawerView.isHidden = true
+        }else if sender.titleLabel?.text == "Pos3"{
+            dragview.center = CGPoint(x: dragview.center.x, y: 2000)
+            removeAll()
+            loadPos3()
             posDrawerView.isHidden = false
             wisataDrawerView.isHidden = true
         }else if sender.titleLabel?.text == "Wisata"{
+            dragview.center = CGPoint(x: dragview.center.x, y: 2000)
             posDrawerView.isHidden = true
             wisataDrawerView.isHidden = false
         }
         UIView.animate(withDuration: 0.3) { [self] in
             dragview.center = CGPoint(x: dragview.center.x, y: 950)
         }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func emergencyCall(_ sender: UIButton){
+        let alertController = UIAlertController(title: "Emergency Call", message: "Mountain Papandayan", preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Call Nearest Police ", style: .default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Call Nearest Hospital", style: .default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func deleteDrawer(_ sender: UIButton) {

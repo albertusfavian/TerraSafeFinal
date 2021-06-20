@@ -29,7 +29,7 @@
                         <color key="backgroundColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo Onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="MqN-ca-49I">
-                        <rect key="frame" x="18" y="13" width="40" height="40"/>
+                        <rect key="frame" x="28" y="30" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                 </subviews>

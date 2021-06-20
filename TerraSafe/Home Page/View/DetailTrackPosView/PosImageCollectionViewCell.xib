@@ -29,6 +29,11 @@
                 <constraint firstItem="Z9t-pH-zc8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="r0n-Sq-Ont"/>
             </constraints>
             <size key="customSize" width="17" height="50"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="posImage" destination="Z9t-pH-zc8" id="Iw9-eu-4oj"/>
             </connections>

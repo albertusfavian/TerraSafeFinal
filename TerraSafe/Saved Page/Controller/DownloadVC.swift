@@ -29,7 +29,7 @@ class DownloadVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let savedCell = tableView.dequeueReusableCell(withIdentifier: "savedCell", for: indexPath) as! SavedTVC
         savedCell.mountainNameLabel.text = "Gn Papandayan"
-        savedCell.trackViaLabel.text = "Track Via Sirah Kencong"
+        savedCell.trackViaLabel.text = "Track Via Jalur selatan"
         savedCell.distanceLabelAndHour.text = "3 hour, 8,55km"
         savedCell.backgroundView = UIImageView(image: UIImage(named: "dummy_gambar-1"))
         savedCell.layer.cornerRadius = 10

@@ -142,10 +142,10 @@ class Initial {
     func insertWholeData(){
         
         // Mountain 1
-        insertItemMountain(mountainImage: "mountainTest", mountainName: "Papandayan1", mountainDesc: "gunung pemula", mountainLocation: "Guntur", mountainTrackCount: "3 Tracks", mountainElevation: "2015")
+        insertItemMountain(mountainImage: "mountainTest", mountainName: "Gn. Papandayan", mountainDesc: "A popular strato volcano mountain amongst hikers known for its outstanding views", mountainLocation: "Kabupaten Garut, West Java", mountainTrackCount: "1 Track", mountainElevation: "2.295 mdpl")
         
             // Track 1.1
-            insertItemTrack(mountainName: arrayMountain[0], trackName: "Jalur Camp David", trackLength: "4 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637)
+            insertItemTrack(mountainName: arrayMountain[0], trackName: "Jalur Camp David", trackLength: "8.55 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637)
     
 
                 // Wisata 1.1
@@ -167,7 +167,7 @@ class Initial {
                     // Wisata Dangers
                     
                 // Pos 1.1
-                insertItemPos(trackName: arrayTrack[0], posName: "Pondok Salada1", posTime: "10 menit", posLength: "100m", posMdpl: "520 mdpl", posHourDate: "5 jam", posHourTime: "100 menit", posTrackCondition: "berat")
+                insertItemPos(trackName: arrayTrack[0], posName: "Merbabu", posTime: "10 menit", posLength: "100m", posMdpl: "520 mdpl", posHourDate: "5 jam", posHourTime: "100 menit", posTrackCondition: "berat")
                 
                     // Pos Image
 
@@ -176,7 +176,7 @@ class Initial {
                     // Pos Dangers
         
                 // Pos 1.2
-                insertItemPos(trackName: arrayTrack[0], posName: "Pondok Salada2", posTime: "10 menit", posLength: "100m", posMdpl: "520 mdpl", posHourDate: "5 jam", posHourTime: "100 menit", posTrackCondition: "berat")
+                insertItemPos(trackName: arrayTrack[0], posName: "Merbabu 2", posTime: "10 menit", posLength: "100m", posMdpl: "520 mdpl", posHourDate: "5 jam", posHourTime: "100 menit", posTrackCondition: "berat")
         
                     // Pos Image
 
