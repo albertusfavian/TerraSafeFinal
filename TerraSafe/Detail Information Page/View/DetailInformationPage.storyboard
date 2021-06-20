@@ -103,6 +103,8 @@
                                                 <constraint firstAttribute="trailing" secondItem="g7U-s8-poA" secondAttribute="trailing" constant="16" id="ufc-58-VNY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.26274509800000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.28392325185498885" green="0.40519987152080339" blue="0.34131235437905821" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="hourLabel" destination="g7U-s8-poA" id="lcb-y5-cPy"/>
                                             <outlet property="trackNameLabel" destination="tXf-IR-bku" id="6IW-bM-2ig"/>
