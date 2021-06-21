@@ -94,16 +94,72 @@
                                     <constraint firstItem="unQ-hR-xB0" firstAttribute="leading" secondItem="PbN-xX-OEY" secondAttribute="leading" id="yq3-sh-UVj"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Offline download" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FgZ-b7-3ya">
+                                <rect key="frame" x="20" y="44" width="350" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8gL-C1-4YC"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style Pack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJY-lE-cwh">
+                                <rect key="frame" x="20" y="160" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SBi-QM-hod">
+                                <rect key="frame" x="20" y="230" width="350" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tile Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAp-17-gaD">
+                                <rect key="frame" x="20" y="201" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wa1-Z3-Eft">
+                                <rect key="frame" x="20" y="266" width="350" height="30"/>
+                                <state key="normal" title="Download Map"/>
+                                <connections>
+                                    <action selector="downloadMapButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bF9-M8-9UG"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vz6-x6-Lf8">
+                                <rect key="frame" x="20" y="189" width="350" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
+                            <constraint firstItem="pJY-lE-cwh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="5Ni-p0-BQd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pJY-lE-cwh" secondAttribute="trailing" constant="20" id="95T-Hq-ZOh"/>
+                            <constraint firstItem="FgZ-b7-3ya" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="BXh-Pz-npb"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PbN-xX-OEY" secondAttribute="trailing" constant="20" id="CPE-1V-jRl"/>
+                            <constraint firstItem="VAp-17-gaD" firstAttribute="top" secondItem="Vz6-x6-Lf8" secondAttribute="bottom" constant="8" symbolic="YES" id="DU7-Qx-t2F"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PbN-xX-OEY" secondAttribute="bottom" constant="64" id="H9d-m4-jvH"/>
+                            <constraint firstItem="FgZ-b7-3ya" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Jhm-JW-gkv"/>
+                            <constraint firstItem="SBi-QM-hod" firstAttribute="top" secondItem="VAp-17-gaD" secondAttribute="bottom" constant="8" symbolic="YES" id="Jpj-qw-W5s"/>
+                            <constraint firstItem="Vz6-x6-Lf8" firstAttribute="top" secondItem="pJY-lE-cwh" secondAttribute="bottom" constant="8" symbolic="YES" id="KJK-Fj-bY0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vz6-x6-Lf8" secondAttribute="trailing" constant="20" id="M2t-YD-hMP"/>
+                            <constraint firstItem="pJY-lE-cwh" firstAttribute="top" secondItem="FgZ-b7-3ya" secondAttribute="bottom" constant="16" id="NKI-M1-PrX"/>
+                            <constraint firstItem="SBi-QM-hod" firstAttribute="top" secondItem="VAp-17-gaD" secondAttribute="bottom" constant="8" symbolic="YES" id="P0l-EU-eKk"/>
+                            <constraint firstItem="SBi-QM-hod" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="P0m-NT-iFr"/>
+                            <constraint firstItem="wa1-Z3-Eft" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="S9c-hV-Nnp"/>
+                            <constraint firstItem="VAp-17-gaD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="aTh-e5-9AD"/>
+                            <constraint firstItem="Vz6-x6-Lf8" firstAttribute="top" secondItem="pJY-lE-cwh" secondAttribute="bottom" constant="8" symbolic="YES" id="fli-EM-xHY"/>
+                            <constraint firstItem="SBi-QM-hod" firstAttribute="top" secondItem="VAp-17-gaD" secondAttribute="bottom" constant="8" symbolic="YES" id="j6r-UI-aPN"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ibt-gN-1Ee" secondAttribute="bottom" constant="64" id="lVC-iX-TJE"/>
                             <constraint firstItem="Ibt-gN-1Ee" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mZc-jV-YnT"/>
+                            <constraint firstItem="wa1-Z3-Eft" firstAttribute="top" secondItem="SBi-QM-hod" secondAttribute="bottom" constant="32" id="oZH-na-N5b"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FgZ-b7-3ya" secondAttribute="trailing" constant="20" id="qfu-A3-s0p"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VAp-17-gaD" secondAttribute="trailing" constant="20" id="r1q-Qs-qln"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wPz-Yd-GKL" secondAttribute="bottom" constant="64" id="rGd-Be-yHv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wa1-Z3-Eft" secondAttribute="trailing" constant="20" id="rgT-hX-CdX"/>
                             <constraint firstItem="wPz-Yd-GKL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="sUv-f8-Q7B"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SBi-QM-hod" secondAttribute="trailing" constant="20" id="x5x-M1-qqU"/>
+                            <constraint firstItem="Vz6-x6-Lf8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="z8l-oI-Z6B"/>
                         </constraints>
                     </view>
                     <connections>
@@ -111,19 +167,29 @@
                         <outlet property="dateView" destination="wPz-Yd-GKL" id="hhe-vz-p9M"/>
                         <outlet property="distanceLabel" destination="Uuf-Wc-SaV" id="A5u-N9-LdR"/>
                         <outlet property="distanceView" destination="Ibt-gN-1Ee" id="ugN-Sj-i4a"/>
+                        <outlet property="downloadMapButton" destination="wa1-Z3-Eft" id="cCg-FD-87W"/>
                         <outlet property="durationLabel" destination="unQ-hR-xB0" id="vH1-Fy-yUb"/>
                         <outlet property="durationView" destination="PbN-xX-OEY" id="ita-ZE-nCd"/>
+                        <outlet property="logView" destination="FgZ-b7-3ya" id="VtB-gk-rfW"/>
+                        <outlet property="stylePackProgressView" destination="Vz6-x6-Lf8" id="qNZ-AK-yYc"/>
                         <outlet property="tempLabel" destination="ZBj-Qv-TBl" id="j4p-ZZ-wkI"/>
+                        <outlet property="tileRegionProgressView" destination="SBi-QM-hod" id="wTh-B8-tJ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+            <point key="canvasLocation" x="130.76923076923077" y="115.16587677725119"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

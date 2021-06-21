@@ -67,5 +67,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Untuk menemukan lokasi kamu di hutan</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Untuk menemukan lokasi kamu di hutan</string>
 </dict>
 </plist>

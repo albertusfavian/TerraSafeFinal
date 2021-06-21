@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19A26EEF51F23183FF392199 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		290E9812267CC38D004A5050 /* Smiley.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 290E9811267CC38D004A5050 /* Smiley.gltf */; };
 		29523B44267776F700E194C8 /* mountain.json in Resources */ = {isa = PBXBuildFile; fileRef = 29523B43267776F700E194C8 /* mountain.json */; };
 		297C07B3266FDCFB00885885 /* g1t1.json in Resources */ = {isa = PBXBuildFile; fileRef = 297C07B2266FDCFB00885885 /* g1t1.json */; };
 		8E3F82092679E736005DBA59 /* sampleNewTabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3F82072679E736005DBA59 /* sampleNewTabPage.storyboard */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		2088D806C9FE95FA443BEE87 /* Pods-TerraSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TerraSafe.debug.xcconfig"; path = "Target Support Files/Pods-TerraSafe/Pods-TerraSafe.debug.xcconfig"; sourceTree = "<group>"; };
+		290E9811267CC38D004A5050 /* Smiley.gltf */ = {isa = PBXFileReference; lastKnownFileType = text; path = Smiley.gltf; sourceTree = "<group>"; };
 		29523B43267776F700E194C8 /* mountain.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mountain.json; sourceTree = "<group>"; };
 		297C07B2266FDCFB00885885 /* g1t1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = g1t1.json; sourceTree = "<group>"; };
 		297C07B4266FE7D700885885 /* bc_TrackEmergencyInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bc_TrackEmergencyInfoVC.swift; path = TerraSafe/bc_TrackEmergencyInfoVC.swift; sourceTree = SOURCE_ROOT; };
@@ -199,6 +201,7 @@
 				8E9F87D8266D1195007E7375 /* TerraSafe.xcdatamodeld */,
 				297C07B2266FDCFB00885885 /* g1t1.json */,
 				29523B43267776F700E194C8 /* mountain.json */,
+				290E9811267CC38D004A5050 /* Smiley.gltf */,
 			);
 			path = TerraSafe;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				B7DFE9C9267163230025433C /* Home.storyboard in Resources */,
 				B78A5F4D2677AC360021BCF0 /* WisataDangerCollectionViewCell.xib in Resources */,
 				B78A5E8826771F460021BCF0 /* PosDangerCollectionViewCell.xib in Resources */,
+				290E9812267CC38D004A5050 /* Smiley.gltf in Resources */,
 				8E9F87DF266D1196007E7375 /* LaunchScreen.storyboard in Resources */,
 				8E9F87DC266D1196007E7375 /* Assets.xcassets in Resources */,
 				8E55B1CB267B8EA5001C3CA6 /* Saved.storyboard in Resources */,
