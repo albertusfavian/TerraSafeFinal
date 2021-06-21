@@ -29,6 +29,11 @@
                 <constraint firstItem="Ki5-p8-ovK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fgu-z6-1Hg"/>
             </constraints>
             <size key="customSize" width="131" height="66"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="wisataImage" destination="Ki5-p8-ovK" id="PYM-1D-8hF"/>
             </connections>

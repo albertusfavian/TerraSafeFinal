@@ -344,7 +344,7 @@ class TrackEmergencyInfoViewController: UIViewController {
     }
     
     func manageUserLocation() {
-        locationManager.delegate = self
+//        locationManager.delegate = self
         locationManager.requestLocation()
         
         locationManager.requestAlwaysAuthorization()
@@ -382,27 +382,10 @@ class TrackEmergencyInfoViewController: UIViewController {
     }
 
     func initAndCenterMap() {
-//        let accessToken = "sk.eyJ1Ijoicm9ueWZoZWJyaWFuIiwiYSI6ImNrcGZpb3lrMDIxbHIycGxsdnV3aWgyMmMifQ.rOTrlXaNZnmayRKptNjlcA"
-//        ResourceOptionsManager.default.resourceOptions.accessToken = accessToken
-//
-//        let camera = CameraOptions(center: centerCoordinate,
-//                                   zoom: zoom,
-//                                   bearing: 217,
-//                                   pitch: 80)
-//
-//        let options = MapInitOptions(
-//            cameraOptions: camera,
-//            styleURI: StyleURI(rawValue: "mapbox://styles/mapbox-map-design/ckhqrf2tz0dt119ny6azh975y")!)
-
         mapView = MapView(frame: view.bounds, mapInitOptions: mapInitOptions)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.ornaments.options.scaleBar.visibility = .visible
-        
-//        let bounds = CoordinateBounds(southwest: CLLocationCoordinate2D(latitude: -7.2648290061741365, longitude: 107.81201375607087), northeast: CLLocationCoordinate2D(latitude: -7.363248083832096, longitude: 107.6725416749965))
-//        mapView.camera.options = CameraBoundsOptions(bounds: bounds, maxZoom: nil, minZoom: nil, maxPitch: nil, minPitch: nil)
-//        let c = mapView.mapboxMap.camera(for: bounds, padding: .zero, bearing: bearing, pitch: Double(pitch))
-//        mapView.mapboxMap.setCamera(to: c)
-        
+
         view.addSubview(mapView)
     }
 
@@ -487,7 +470,7 @@ class TrackEmergencyInfoViewController: UIViewController {
         pointAnnotationManager.syncAnnotations(points)
         self.pointAnnotationManager = pointAnnotationManager
 
-        self.pointAnnotationManager?.delegate = self
+//        self.pointAnnotationManager?.delegate = self
     }
 
     func addTerrain() {
@@ -522,6 +505,7 @@ class TrackEmergencyInfoViewController: UIViewController {
 
 }
 
+/*
 extension TrackEmergencyInfoViewController: AnnotationInteractionDelegate {
     func annotationManager(_ manager: AnnotationManager, didDetectTappedAnnotations annotations: [Annotation]) {
         if (annotations.count > 0) {
@@ -546,9 +530,10 @@ extension TrackEmergencyInfoViewController: CLLocationManagerDelegate {
         print(error)
     }
 }
+ */
 
 // MARK: - Convenience classes for tile and style classes
-
+/*
 extension TileRegionLoadProgress {
     public override var description: String {
         "TileRegionLoadProgress: \(completedResourceCount) / \(requiredResourceCount)"
@@ -605,3 +590,4 @@ public final class OfflineManagerLogWriter {
         }
     }
 }
+*/

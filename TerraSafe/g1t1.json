@@ -10,7 +10,7 @@
         "marker-symbol": "campsite",
         "elevation": 2008,
         "facilities": "registration,mosque,toilet,warung,water",
-        "posName": "Camp David",
+        "posName": "Pos1",
         "kind": "checkpoint"
       },
       "geometry": {
@@ -27,7 +27,7 @@
         "marker-color": "#fffc41",
         "marker-size": "large",
         "marker-symbol": "campsite",
-        "posName": "Camp David",
+        "posName": "Pos2",
         "kind": "checkpoint"
       },
       "geometry": {
@@ -44,7 +44,7 @@
         "marker-color": "#fffc41",
         "marker-size": "large",
         "marker-symbol": "triangle-stroked",
-        "posName": "Camp David",
+        "posName": "Pos3",
         "kind": "checkpoint"
       },
       "geometry": {
@@ -62,7 +62,7 @@
         "marker-size": "large",
         "marker-symbol": "campsite",
         "alternative": "true",
-        "posName": "Camp David",
+        "posName": "Post4",
         "kind": "checkpoint"
       },
       "geometry": {
@@ -97,7 +97,8 @@
         "marker-size": "medium",
         "marker-symbol": "monument",
         "kind": "park",
-        "title": "Hutan Mati"
+        "posName": "Wisata",
+        "title": "Wisata"
       },
       "geometry": {
         "type": "Point",

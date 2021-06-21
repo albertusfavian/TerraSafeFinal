@@ -11,6 +11,7 @@ import CoreData
 class HomeViewController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var homeArray = [Mountain]()
+    var tempArray: Mountain?
     @IBOutlet weak var mountainCollectionView: UICollectionView!
     var selectedMountain: String?
     var mountainDescription: String?
@@ -99,18 +100,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let destinationVC = segue.destination as? DetailInformationPageVC
-        print(selectedMountain)
         destinationVC?.mountainNameVar = selectedMountain!
-        destinationVC?.mountainDescVar = mountainHeight!
+        destinationVC?.mountainDescVar = mountainDescription!
         destinationVC?.mountainLocationVar = mountainLocation!
-        destinationVC?.mountainHeightVar = mountainDescription!
-//            
-//            destinationVC.mountain?.mountainName = selectedMountain
-//            destinationVC.mountain?.mountainDesc = mountainDescription
-//            destinationVC.mountain?.mountainLocation = mountainLocation
-//            destinationVC.mountain?.mountainElevation = mountainHeight
-        
-        
+        destinationVC?.mountainHeightVar = mountainHeight!
     }
     
 }

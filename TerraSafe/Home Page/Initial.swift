@@ -18,6 +18,7 @@ class Initial {
     var arrayCollectionImage = [CollectionImagesPin]()
     var arrayCollectionFacilities = [CollectionFacilities]()
     var arrayCollectionDanger = [CollectionDanger]()
+    let userDefaultValue = UserDefaults.standard.getValueLoad()
     
     // MARK: - Manipulation Data Source
 
@@ -45,7 +46,7 @@ class Initial {
         saveItems()
     }
     
-    func insertItemTrack(mountainName: Mountain, trackName: String, trackLength: String, trackTime: String, trackLongtitude: Double, trackLatitude: Double, trackBearing: Double, maxNorthEastLat: Double, maxNorthEastLong: Double, maxSouthWestLat: Double, maxSouthWestLong: Double){
+    func insertItemTrack(mountainName: Mountain, trackName: String, trackLength: String, trackTime: String, trackLongtitude: Double, trackLatitude: Double, trackBearing: Double, maxNorthEastLat: Double, maxNorthEastLong: Double, maxSouthWestLat: Double, maxSouthWestLong: Double, saved: Bool){
         let newItem = Track(context: context)
         newItem.trackName = trackName
         newItem.trackLength = trackLength
@@ -58,6 +59,7 @@ class Initial {
         newItem.maxNorthEastLong = maxNorthEastLong
         newItem.maxSouthWestLat = maxSouthWestLat
         newItem.maxSouthWestLong = maxSouthWestLong
+        newItem.saved = saved
         arrayTrack.append(newItem)
         saveItems()
     }
@@ -140,19 +142,19 @@ class Initial {
 
     
     func insertWholeData(){
-        
+        if userDefaultValue == nil{
         // Mountain 1
-        insertItemMountain(mountainImage: "mountainTest", mountainName: "Papandayan1", mountainDesc: "gunung pemula", mountainLocation: "Guntur", mountainTrackCount: "3 Tracks", mountainElevation: "2015")
+        insertItemMountain(mountainImage: "mountainTest", mountainName: "Mt. Papandayan", mountainDesc: "A popular strato volcano mountain amongst hikers known for its outstanding views", mountainLocation: "Kabupaten Garut, West Java", mountainTrackCount: "1 Track", mountainElevation: "2.295 mdpl")
         
             // Track 1.1
-            insertItemTrack(mountainName: arrayMountain[0], trackName: "Jalur Camp David", trackLength: "4 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637)
+            insertItemTrack(mountainName: arrayMountain[0], trackName: "Jalur Camp David", trackLength: "8.55 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637, saved: false)
     
 
                 // Wisata 1.1
                 insertItemWisata(trackName: arrayTrack[0], wisataName: "Hutan Mati1", wisataDesc: "object wisata paling terkenal", wisataReach: "jalan dikit nyampe")
                     
                     // Wisata Image
-        
+                    
                     // Wisata Facilities
         
                     // Wisata Dangers
@@ -167,7 +169,7 @@ class Initial {
                     // Wisata Dangers
                     
                 // Pos 1.1
-                insertItemPos(trackName: arrayTrack[0], posName: "Pondok Salada1", posTime: "10 menit", posLength: "100m", posMdpl: "520 mdpl", posHourDate: "5 jam", posHourTime: "100 menit", posTrackCondition: "berat")
+                insertItemPos(trackName: arrayTrack[0], posName: "Merbabu", posTime: "10 menit", posLength: "100m", posMdpl: "520 mdpl", posHourDate: "5 jam", posHourTime: "100 menit", posTrackCondition: "berat")
                 
                     // Pos Image
 
@@ -176,7 +178,7 @@ class Initial {
                     // Pos Dangers
         
                 // Pos 1.2
-                insertItemPos(trackName: arrayTrack[0], posName: "Pondok Salada2", posTime: "10 menit", posLength: "100m", posMdpl: "520 mdpl", posHourDate: "5 jam", posHourTime: "100 menit", posTrackCondition: "berat")
+                insertItemPos(trackName: arrayTrack[0], posName: "Merbabu 2", posTime: "10 menit", posLength: "100m", posMdpl: "520 mdpl", posHourDate: "5 jam", posHourTime: "100 menit", posTrackCondition: "berat")
         
                     // Pos Image
 
@@ -192,9 +194,12 @@ class Initial {
         insertItemMountain(mountainImage: "mountainTest", mountainName: "Papandayan3", mountainDesc: "gunung pemula", mountainLocation: "Guntur", mountainTrackCount: "1 Tracks", mountainElevation: "2015")
         
 
-        insertItemTrack(mountainName: arrayMountain[1], trackName: "Jalur Camp David", trackLength: "4 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637)
-        insertItemTrack(mountainName: arrayMountain[1], trackName: "Jalur Camp David", trackLength: "4 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637)
-        insertItemTrack(mountainName: arrayMountain[1], trackName: "Jalur Camp David", trackLength: "4 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637)
+            insertItemTrack(mountainName: arrayMountain[1], trackName: "Jalur Camp David", trackLength: "4 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637, saved: false)
+            insertItemTrack(mountainName: arrayMountain[1], trackName: "Jalur Camp David", trackLength: "4 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637, saved: false)
+            insertItemTrack(mountainName: arrayMountain[1], trackName: "Jalur Camp David", trackLength: "4 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637, saved: false)
+            
+            UserDefaults.standard.setValueLoad(value: true)
+        }
     }
 }
 
