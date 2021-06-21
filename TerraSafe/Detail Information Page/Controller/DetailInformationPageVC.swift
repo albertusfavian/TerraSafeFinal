@@ -44,7 +44,6 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
     let url = URL(string: "http://api.openweathermap.org/data/2.5/forecast?q=Malang&appid=3e6254eea851a148b52545bce50cba35&units=metric")
     let requestService = NetworkRequest()
     var indexImage: Int = 0
-    
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -116,7 +115,7 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
         cell?.layer.borderWidth = 3
         cell?.layer.borderColor = tableView.backgroundColor?.cgColor
 
-        cell?.contentView.backgroundColor = UIColor.green
+        cell?.contentView.backgroundColor = #colorLiteral(red: 0.2466135621, green: 0.4093926549, blue: 0.336640954, alpha: 1)
         cell?.trackNameLabel.text = trackArray[indexPath.row].trackName
         cell?.hourLabel.text = trackArray[indexPath.row].trackTime
         cell?.lengthLabel.text   = trackArray[indexPath.row].trackLength

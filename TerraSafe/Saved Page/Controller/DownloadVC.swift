@@ -31,7 +31,7 @@ class DownloadVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         savedCell.mountainNameLabel.text = "Gn Papandayan"
         savedCell.trackViaLabel.text = "Track Via Jalur selatan"
         savedCell.distanceLabelAndHour.text = "3 hour, 8,55km"
-        savedCell.backgroundView = UIImageView(image: UIImage(named: "dummy_gambar-1"))
+        savedCell.backgroundView = UIImageView(image: UIImage(named: "img_DownloadPage"))
         savedCell.layer.cornerRadius = 10
         savedCell.layer.borderWidth = 4
         savedCell.layer.borderColor = tableView.backgroundColor?.cgColor

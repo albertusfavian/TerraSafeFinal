@@ -35,6 +35,12 @@ class MapsViewController: UIViewController{
     private var tileStore: TileStore?
     private var logger: OfflineManagerLogWriter!
     
+    @IBOutlet weak var infoMaps: UIView!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var durationTitleLabel: UILabel!
     
     
     // MARK -Initiate IBOutlet
@@ -211,9 +217,10 @@ class MapsViewController: UIViewController{
     
     
     func initView() {
-//        self.view.bringSubviewToFront(dateView)
-//        self.view.bringSubviewToFront(distanceView)
-//        self.view.bringSubviewToFront(durationView)
+//        self.view.bringSubviewToFront(self.durationLabel)
+//        self.view.bringSubviewToFront(self.distanceLabel)
+//        self.view.bringSubviewToFront(self.tempLabel)
+        self.view.bringSubviewToFront(infoMaps)
         self.view.bringSubviewToFront(logViewerTextView)
         self.view.bringSubviewToFront(stylePackProgressView)
         self.view.bringSubviewToFront(tileRegionProgressView)
