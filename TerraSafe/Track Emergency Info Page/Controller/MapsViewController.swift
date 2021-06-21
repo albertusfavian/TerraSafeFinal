@@ -35,14 +35,24 @@ class MapsViewController: UIViewController{
     private var tileStore: TileStore?
     private var logger: OfflineManagerLogWriter!
     
-    @IBOutlet weak var infoMaps: UIView!
-    @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var tempLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var dateImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var durationTitleLabel: UILabel!
+    @IBOutlet weak var dateCelcius: UILabel!
+    
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var distanceTitle: UILabel!
+    
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var durationTitle: UILabel!
+    @IBOutlet weak var durationImage: UIImageView!
+    
+    @IBOutlet weak var wallOne: UIView!
+    @IBOutlet weak var wallTwo: UIView!
+    
+    @IBOutlet weak var downloadFinished: UIImageView!
     
     
+    @IBOutlet weak var mainView: UIView!
     // MARK -Initiate IBOutlet
     @IBOutlet weak var dragview: UIView!
     @IBOutlet weak var posDrawerView: UIView!
@@ -61,9 +71,10 @@ class MapsViewController: UIViewController{
     @IBOutlet weak var posDesc: UILabel!
     @IBOutlet weak var downloadMapButton: UIBarButtonItem!
     @IBOutlet weak var tileRegionProgressView: UIProgressView!
-    @IBOutlet weak var logViewerTextView: UITextView!
     
+    @IBOutlet weak var logViewerTextView: UITextView!
     @IBOutlet weak var loggerView: UIView!
+    
     private var downloads: [Cancelable] = []
     private let tileRegionId = "myTileRegion"
     private let centerCoordinate = CLLocationCoordinate2D(latitude: -7.3193251, longitude: 107.726672)
@@ -107,7 +118,6 @@ class MapsViewController: UIViewController{
             switch (oldValue, state) {
             case (_, .initial):
                 resetUI()
-
                 let tileStore = TileStore.default
                 let accessToken = ResourceOptionsManager.default.resourceOptions.accessToken
                 tileStore.setOptionForKey(TileStoreOptions.mapboxAccessToken, value: accessToken as Any)
@@ -120,13 +130,15 @@ class MapsViewController: UIViewController{
             case (.initial, .downloading):
                 // Can cancel
                 // Alert Cancel
-                downloadMapButton.isEnabled = false
+                mainView.bringSubviewToFront(loggerView)
+                mainView.bringSubviewToFront(logViewerTextView)
+
 
             case (.downloading, .downloaded):
                 logger?.log(message: "Disabling HTTP stack network connection", category: "Example", color: .orange)
                 OfflineSwitch.shared.isMapboxStackConnected = false
                 showMapView()
-                
+                downloadFinished.isHidden = false
 
             case (.downloaded, .mapViewDisplayed):
                 showMapView()
@@ -134,7 +146,7 @@ class MapsViewController: UIViewController{
 
             case (.mapViewDisplayed, .finished), (.downloading, .finished):
                 downloadMapButton.isEnabled = false
-
+                
             default:
                 fatalError("Invalid transition from \(oldValue) to \(state)")
             }
@@ -217,15 +229,23 @@ class MapsViewController: UIViewController{
     
     
     func initView() {
-//        self.view.bringSubviewToFront(self.durationLabel)
-//        self.view.bringSubviewToFront(self.distanceLabel)
-//        self.view.bringSubviewToFront(self.tempLabel)
-        self.view.bringSubviewToFront(infoMaps)
-        self.view.bringSubviewToFront(logViewerTextView)
+        downloadFinished.isHidden = true
+//        self.view.bringSubviewToFront(infoMaps)
+//        self.view.bringSubviewToFront(logViewerTextView)
+        self.view.bringSubviewToFront(dateImage)
+        self.view.bringSubviewToFront(dateLabel)
+        self.view.bringSubviewToFront(dateCelcius)
+        self.view.bringSubviewToFront(distanceTitle)
+        self.view.bringSubviewToFront(distanceLabel)
+        self.view.bringSubviewToFront(durationLabel)
+        self.view.bringSubviewToFront(durationTitle)
+        self.view.bringSubviewToFront(durationImage)
+        self.view.bringSubviewToFront(wallOne)
+        self.view.bringSubviewToFront(wallTwo)
         self.view.bringSubviewToFront(stylePackProgressView)
         self.view.bringSubviewToFront(tileRegionProgressView)
         self.view.bringSubviewToFront(dragview)
-        self.view.bringSubviewToFront(loggerView)
+//        self.view.bringSubviewToFront(loggerView)
     }
      
     /*
@@ -271,6 +291,15 @@ class MapsViewController: UIViewController{
         mapView.mapboxMap.setCamera(to: CameraOptions(pitch: CGFloat(0)))
 
         self.mapView = mapView
+        let seconds = 2.0
+        self.view.bringSubviewToFront(downloadFinished)
+        downloadFinished.isHidden = false
+        downloadMapButton.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            self.downloadFinished.isHidden = true
+        }
+        
+
     }
     
     internal func decodeGeoJSON(from fileName: String) throws -> FeatureCollection? {

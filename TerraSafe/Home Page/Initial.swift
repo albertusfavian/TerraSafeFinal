@@ -189,9 +189,9 @@ class Initial {
         
         
         
-        insertItemMountain(mountainImage: "mountainTest", mountainName: "Papandayan2", mountainDesc: "gunung pemula", mountainLocation: "Guntur", mountainTrackCount: "2 Tracks", mountainElevation: "2015")
+        insertItemMountain(mountainImage: "mountainTest", mountainName: "Mt. Guntur", mountainDesc: "gunung pemula", mountainLocation: "Guntur", mountainTrackCount: "2 Tracks", mountainElevation: "2015")
         
-        insertItemMountain(mountainImage: "mountainTest", mountainName: "Papandayan3", mountainDesc: "gunung pemula", mountainLocation: "Guntur", mountainTrackCount: "1 Tracks", mountainElevation: "2015")
+        insertItemMountain(mountainImage: "dummy_gambar-1", mountainName: "Mt. Cikuray", mountainDesc: "gunung pemula", mountainLocation: "Guntur", mountainTrackCount: "1 Tracks", mountainElevation: "2015")
         
 
             insertItemTrack(mountainName: arrayMountain[1], trackName: "Jalur Camp David", trackLength: "4 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637, saved: false)
