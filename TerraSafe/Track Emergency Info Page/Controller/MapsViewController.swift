@@ -27,6 +27,10 @@ class MapsViewController: UIViewController{
     var maxNorthEastLong: Double?
     var maxSouthWestLat: Double?
     var maxSouthWestLong: Double?
+    var date: String = ""
+    var temp: String = ""
+    var distance: String = ""
+    var duration: String = ""
     
     internal var mapView: MapView!
     internal var pointAnnotationManager: PointAnnotationManager?
@@ -184,6 +188,9 @@ class MapsViewController: UIViewController{
             
             self.setUpUserLocation()
         }
+        
+        dateCelcius.text = "\(temp)°C"
+        dateLabel.text = date
     }
     
     func registerPostXib() {
@@ -582,8 +589,8 @@ class MapsViewController: UIViewController{
 
     var WisataImages = [
         wisataImagesData(wisataImage: #imageLiteral(resourceName: "img_tegal_alun_1")),
-        wisataImagesData(wisataImage: #imageLiteral(resourceName: "SignForLost.4")),
-        wisataImagesData(wisataImage: #imageLiteral(resourceName: "TerrainCondition.5"))
+        wisataImagesData(wisataImage: #imageLiteral(resourceName: "img_goeberhood_1")),
+        wisataImagesData(wisataImage: #imageLiteral(resourceName: "img_Gunung_Papandayan_Slide_1"))
     ]
 
     var WisataFacilities = [

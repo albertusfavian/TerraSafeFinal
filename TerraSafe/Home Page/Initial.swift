@@ -144,7 +144,7 @@ class Initial {
     func insertWholeData(){
         if userDefaultValue == nil{
         // Mountain 1
-        insertItemMountain(mountainImage: "mountainTest", mountainName: "Mt. Papandayan", mountainDesc: "A popular strato volcano mountain amongst hikers known for its outstanding views", mountainLocation: "Kabupaten Garut, West Java", mountainTrackCount: "1 Track", mountainElevation: "2.295 mdpl")
+        insertItemMountain(mountainImage: "img_HomePage", mountainName: "Mt. Papandayan", mountainDesc: "A popular strato volcano mountain amongst hikers known for its outstanding views", mountainLocation: "Kabupaten Garut, West Java", mountainTrackCount: "1 Track", mountainElevation: "2.295 mdpl")
         
             // Track 1.1
             insertItemTrack(mountainName: arrayMountain[0], trackName: "Jalur Camp David", trackLength: "8.55 km", trackTime: "3 Hours", trackLongtitude: 107.726672, trackLatitude: -7.3193251, trackBearing: 217, maxNorthEastLat: -7.1578835, maxNorthEastLong: 107.874903, maxSouthWestLat: -7.4221481, maxSouthWestLong: 107.5298637, saved: false)

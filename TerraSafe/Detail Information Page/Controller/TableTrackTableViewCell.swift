@@ -12,6 +12,8 @@ class TableTrackTableViewCell: UITableViewCell {
     @IBOutlet weak var trackNameLabel: UILabel!
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var lengthLabel: UILabel!
+    @IBOutlet weak var hourImage: UIImageView!
+    @IBOutlet weak var distanceImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

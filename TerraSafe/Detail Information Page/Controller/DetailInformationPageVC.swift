@@ -119,6 +119,8 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
         cell?.trackNameLabel.text = trackArray[indexPath.row].trackName
         cell?.hourLabel.text = trackArray[indexPath.row].trackTime
         cell?.lengthLabel.text   = trackArray[indexPath.row].trackLength
+        cell?.distanceImage.image = UIImage(named: "ic_jam")
+        cell?.hourImage.image = UIImage(named: "ic_jarakPutih")
         return cell!
     }
     
@@ -191,7 +193,8 @@ class DetailInformationPageVC: UIViewController, UITableViewDelegate, UITableVie
             controllerMap.maxNorthEastLat = maxNorthEastLat!
             controllerMap.maxSouthWestLong = maxSouthWestLong!
             controllerMap.maxSouthWestLat = maxSouthWestLat!
-        
+            controllerMap.temp = String(listTemp[0])
+            controllerMap.date = String(listDate[0])
         }
         
         

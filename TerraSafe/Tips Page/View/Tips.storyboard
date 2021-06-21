@@ -31,30 +31,28 @@
                                                     <rect key="frame" x="17" y="9" width="381" height="86"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips_Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wB-cx-SXS">
-                                                            <rect key="frame" x="101" y="33" width="264" height="21"/>
+                                                            <rect key="frame" x="80" y="33" width="285" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="1" green="0.98039215690000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13Q-Hi-o1J">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="13Q-Hi-o1J">
                                                             <rect key="frame" x="12" y="13" width="60" height="60"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="1bm-ng-qep"/>
-                                                                <constraint firstAttribute="width" constant="86" id="KRG-Lv-1sM"/>
-                                                                <constraint firstAttribute="height" constant="86" id="ZjX-Cm-02j"/>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="tMf-jh-3Qd"/>
+                                                                <constraint firstAttribute="height" constant="60" id="8ng-2G-l8Y"/>
+                                                                <constraint firstAttribute="width" constant="60" id="PsW-Eq-0ef"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.3294117647" green="0.41176470590000003" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="13Q-Hi-o1J" firstAttribute="top" secondItem="EKM-yI-mIN" secondAttribute="top" id="Eym-VA-qap"/>
-                                                        <constraint firstItem="5wB-cx-SXS" firstAttribute="leading" secondItem="13Q-Hi-o1J" secondAttribute="trailing" constant="15" id="Kkt-W4-4J3"/>
+                                                        <constraint firstItem="13Q-Hi-o1J" firstAttribute="top" secondItem="EKM-yI-mIN" secondAttribute="top" constant="13" id="Eym-VA-qap"/>
+                                                        <constraint firstItem="5wB-cx-SXS" firstAttribute="leading" secondItem="13Q-Hi-o1J" secondAttribute="trailing" constant="8" id="Kkt-W4-4J3"/>
                                                         <constraint firstAttribute="bottom" secondItem="5wB-cx-SXS" secondAttribute="bottom" constant="32" id="Kwm-r3-oFW"/>
                                                         <constraint firstItem="5wB-cx-SXS" firstAttribute="top" secondItem="EKM-yI-mIN" secondAttribute="top" constant="33" id="TM9-jS-VHH"/>
-                                                        <constraint firstAttribute="bottom" secondItem="13Q-Hi-o1J" secondAttribute="bottom" id="jag-Fy-kI8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="13Q-Hi-o1J" secondAttribute="bottom" constant="13" id="jag-Fy-kI8"/>
                                                         <constraint firstAttribute="trailing" secondItem="5wB-cx-SXS" secondAttribute="trailing" constant="16" id="luV-dW-uhj"/>
-                                                        <constraint firstItem="13Q-Hi-o1J" firstAttribute="leading" secondItem="EKM-yI-mIN" secondAttribute="leading" id="sSx-5W-G3g"/>
+                                                        <constraint firstItem="13Q-Hi-o1J" firstAttribute="leading" secondItem="EKM-yI-mIN" secondAttribute="leading" constant="12" id="sSx-5W-G3g"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
