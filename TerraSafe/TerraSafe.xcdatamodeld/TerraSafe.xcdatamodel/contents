@@ -47,6 +47,7 @@
         <attribute name="maxNorthEastLong" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="maxSouthWestLat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="maxSouthWestLong" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="saved" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="trackLength" optional="YES" attributeType="String"/>
         <attribute name="trackName" optional="YES" attributeType="String"/>
         <attribute name="trackTime" optional="YES" attributeType="String"/>
@@ -69,7 +70,7 @@
         <element name="CollectionImagesPin" positionX="-65.2274169921875" positionY="241.8501892089844" width="128" height="88"/>
         <element name="Mountain" positionX="182.3330688476562" positionY="-393.7142639160156" width="128" height="148"/>
         <element name="Pos" positionX="-70.98095703125" positionY="-47.81829833984375" width="128" height="208"/>
-        <element name="Track" positionX="178.8157958984375" positionY="-128.2594757080078" width="128" height="238"/>
+        <element name="Track" positionX="178.8157958984375" positionY="-128.2594757080078" width="128" height="239"/>
         <element name="Wisata" positionX="570.9359130859375" positionY="-102.0874633789062" width="128" height="148"/>
     </elements>
 </model>

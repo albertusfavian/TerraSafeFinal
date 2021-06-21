@@ -54,6 +54,7 @@
 		B78A5F552677B2240021BCF0 /* WisataFacilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5F542677B2240021BCF0 /* WisataFacilities.swift */; };
 		B78A5F582677B2300021BCF0 /* WisataDangers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5F572677B2300021BCF0 /* WisataDangers.swift */; };
 		B78A5F5E2678D0DF0021BCF0 /* Initial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5F5D2678D0DF0021BCF0 /* Initial.swift */; };
+		B78A5F8C267F9C2E0021BCF0 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78A5F8B267F9C2E0021BCF0 /* UserDefault.swift */; };
 		B7DFE9C9267163230025433C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7DFE9C8267163230025433C /* Home.storyboard */; };
 		B7DFE9CC2671637B0025433C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFE9CB2671637B0025433C /* HomeViewController.swift */; };
 		B7DFE9D0267164A60025433C /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DFE9CE267164A60025433C /* HomeCollectionViewCell.swift */; };
@@ -115,6 +116,7 @@
 		B78A5F542677B2240021BCF0 /* WisataFacilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WisataFacilities.swift; sourceTree = "<group>"; };
 		B78A5F572677B2300021BCF0 /* WisataDangers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WisataDangers.swift; sourceTree = "<group>"; };
 		B78A5F5D2678D0DF0021BCF0 /* Initial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
+		B78A5F8B267F9C2E0021BCF0 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		B7DFE9C8267163230025433C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B7DFE9CB2671637B0025433C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B7DFE9CE267164A60025433C /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		8E9F87C3266D1195007E7375 = {
 			isa = PBXGroup;
 			children = (
+				B78A5F8B267F9C2E0021BCF0 /* UserDefault.swift */,
 				8E3F82072679E736005DBA59 /* sampleNewTabPage.storyboard */,
 				8E9F87CE266D1195007E7375 /* TerraSafe */,
 				8E9F87CD266D1195007E7375 /* Products */,
@@ -589,6 +592,7 @@
 				B7DFE9EE2671762F0025433C /* TrackTableViewCell.swift in Sources */,
 				8E9F87D0266D1195007E7375 /* AppDelegate.swift in Sources */,
 				8E8070F9267C4D3300C7F554 /* DownloadVC.swift in Sources */,
+				B78A5F8C267F9C2E0021BCF0 /* UserDefault.swift in Sources */,
 				8E9F87D2266D1195007E7375 /* SceneDelegate.swift in Sources */,
 				8E55B1C1267B6548001C3CA6 /* TableTrackTableViewCell.swift in Sources */,
 				B78A5F582677B2300021BCF0 /* WisataDangers.swift in Sources */,

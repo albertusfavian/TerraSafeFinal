@@ -11,8 +11,13 @@ import CoreData
 class MapsViewController: UIViewController{
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    // Special pake telor buat bang rony
-    var trackName: String?
+    // Array Test
+    var arrayPos = [Pos]()
+    
+    
+    
+    // MARK: -Special pake telor buat bang rony, dah ada isinya dari controller sebelah
+    var trackName: String = ""
     var bearing: Double?
     var latitude: Double?
     var longtitude: Double?
@@ -61,7 +66,6 @@ class MapsViewController: UIViewController{
         
         let nib23 = UINib(nibName: "\(WisataDangerCollectionViewCell.self)", bundle: nil)
         wisataDangers.register(nib23, forCellWithReuseIdentifier: "wisataDangerCell")
-        print(trackName!)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -115,16 +119,21 @@ class MapsViewController: UIViewController{
     ]
     
     
-//    func loadTrack(){
-//        let request : NSFetchRequest<Track> = Track.fetchRequest()
-//        let predicate = NSPredicate(format: "arrayTrack.trackName MATCHES %@", trackName!)
-//        request.predicate = predicate
+//    func loadPos(posName: String){
+//        let request : NSFetchRequest<Pos> = Pos.fetchRequest()
+//        print(trackName)
+//        let trackPredicate = NSPredicate(format: "track.trackName MATCHES %@", trackName)
+//        let posPredicate = NSPredicate(format: "posName MATCHES %@", posName)
+//        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [posPredicate, trackPredicate])
 //        do {
-//            arrayTrack = try context.fetch(request)
+//            arrayPos = try context.fetch(request)
 //        } catch {
 //            print("Error fetching data from context \(error)")
 //        }
 //    }
+
+    
+    
 //
 //    func loadPos(){
 //        let request : NSFetchRequest<Pos> = Pos.fetchRequest()
@@ -136,10 +145,37 @@ class MapsViewController: UIViewController{
 //            print("Error fetching data from context \(error)")
 //        }
 //    }
+    
+    
+    
+    
+    // MARK: - bar bar mode
     func removeAll(){
         PosImages.removeAll()
         PosFacilities.removeAll()
         PosDangers.removeAll()
+    }
+    func loadPos1(){
+        posTitle.text = "Pos 1 (Camp David)"
+        posDesc.text = "Wide and not precitipous. No significant dangers along track conditions."
+        PosImages = [
+            posImagesData(posImage: UIImage(named: "img_pondok_saladah_1")!),
+            posImagesData(posImage: UIImage(named: "img_pondok_saladah_2")!),
+            posImagesData(posImage: UIImage(named: "img_pondok_saladah_3")!)
+        ]
+
+        PosFacilities = [
+            posFacilitiesData(posFacilitiesImage: UIImage(named: "Water drop icon")!, posFacilitiesTitle: "Water Source"),
+            posFacilitiesData(posFacilitiesImage: UIImage(named: "Registration icon")!, posFacilitiesTitle: "Registration"),
+            posFacilitiesData(posFacilitiesImage: UIImage(named: "Parking slot icon")!, posFacilitiesTitle: "Parking Slot"),
+            posFacilitiesData(posFacilitiesImage: UIImage(named: "Waroeng icon")!, posFacilitiesTitle: "Waroeng"),
+            posFacilitiesData(posFacilitiesImage: UIImage(named: "Camp icon")!, posFacilitiesTitle: "Camp")
+
+        ]
+
+        PosDangers = [
+            posDangersData(posDangerImage: UIImage(named: "Boar icon")!, posDangerTitle: "Boar")
+        ]
     }
     func loadPos2(){
         posTitle.text = "Pos 2 (Camp Pondok Salada)"
@@ -190,32 +226,31 @@ class MapsViewController: UIViewController{
     
     
     
-    // MARK: -Drawer Setup
-    // tinggal di ganti conditionnya bang (Sorry manual, rada ngejer waktu bang)
+    // MARK: -Drawer Setup buat merge ni bang
     @IBAction func popup(_ sender: UIButton) {
         if  sender.titleLabel?.text == "Pos1"{
-            dragview.center = CGPoint(x: dragview.center.x, y: 2000)
             posDrawerView.isHidden = false
             wisataDrawerView.isHidden = true
+            removeAll()
+            loadPos1()
         }else if sender.titleLabel?.text == "Pos2"{
-            dragview.center = CGPoint(x: dragview.center.x, y: 2000)
+            posDrawerView.isHidden = false
+            wisataDrawerView.isHidden = true
             removeAll()
             loadPos2()
+        }else if sender.titleLabel?.text == "Pos3"{
             posDrawerView.isHidden = false
             wisataDrawerView.isHidden = true
-        }else if sender.titleLabel?.text == "Pos3"{
-            dragview.center = CGPoint(x: dragview.center.x, y: 2000)
             removeAll()
             loadPos3()
-            posDrawerView.isHidden = false
-            wisataDrawerView.isHidden = true
         }else if sender.titleLabel?.text == "Wisata"{
-            dragview.center = CGPoint(x: dragview.center.x, y: 2000)
             posDrawerView.isHidden = true
             wisataDrawerView.isHidden = false
         }
-        UIView.animate(withDuration: 0.3) { [self] in
-            dragview.center = CGPoint(x: dragview.center.x, y: 950)
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3) { [self] in
+                dragview.center = CGPoint(x: dragview.center.x, y: 950)
+            }
         }
     }
     

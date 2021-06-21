@@ -142,7 +142,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCw-IY-ScA">
-                                <rect key="frame" x="166.66666666666666" y="737" width="57" height="17"/>
+                                <rect key="frame" x="262" y="737" width="57" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -230,7 +230,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUe-Oi-x0U">
-                                <rect key="frame" x="0.0" y="60" width="390" height="784"/>
+                                <rect key="frame" x="0.0" y="555" width="390" height="784"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vjb-FQ-aXe">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="784"/>
@@ -483,6 +483,11 @@
                                             <constraint firstItem="dbm-bm-VJf" firstAttribute="leading" secondItem="Vjb-FQ-aXe" secondAttribute="leading" constant="18" id="xap-Wf-Tjn"/>
                                             <constraint firstItem="plF-IO-g98" firstAttribute="top" secondItem="wtK-Df-i9x" secondAttribute="bottom" constant="14" id="yRl-gp-VVO"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIu-M0-LWF">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="784"/>
@@ -830,10 +835,10 @@
                         <viewLayoutGuide key="safeArea" id="0sB-xM-iCz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ZUe-Oi-x0U" secondAttribute="bottom" id="7ux-ym-Tve"/>
-                            <constraint firstItem="ZUe-Oi-x0U" firstAttribute="top" secondItem="0sB-xM-iCz" secondAttribute="top" constant="16" id="IZ7-Yj-M9g"/>
-                            <constraint firstItem="ZUe-Oi-x0U" firstAttribute="leading" secondItem="0sB-xM-iCz" secondAttribute="leading" id="g0x-Xr-zKw"/>
-                            <constraint firstItem="ZUe-Oi-x0U" firstAttribute="trailing" secondItem="0sB-xM-iCz" secondAttribute="trailing" id="ty3-Pe-thZ"/>
+                            <constraint firstAttribute="bottom" secondItem="ZUe-Oi-x0U" secondAttribute="bottom" constant="-495" id="79k-Jd-72X"/>
+                            <constraint firstItem="ZUe-Oi-x0U" firstAttribute="leading" secondItem="0sB-xM-iCz" secondAttribute="leading" id="Ipi-Tm-BIa"/>
+                            <constraint firstItem="ZUe-Oi-x0U" firstAttribute="top" secondItem="R2D-Go-zpq" secondAttribute="top" constant="555" id="UIu-4G-64p"/>
+                            <constraint firstAttribute="trailing" secondItem="ZUe-Oi-x0U" secondAttribute="trailing" id="eub-GE-FhS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Track Name" id="ZN0-DP-luO">
